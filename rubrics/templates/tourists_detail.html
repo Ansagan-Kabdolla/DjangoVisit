@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+    {% block content %}
+
+<div class="region region-widthcon">
+                <section id="block-block-12" class="block block-block clearfix">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 krohi">
+                                <section id="block-easy-breadcrumb-easy-breadcrumb--2" class="block block-easy-breadcrumb clearfix">
+
+
+                                    <div itemscope="" class="easy-breadcrumb">
+                                        <span itemprop="title"><a href="{% url 'index' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                        <span itemprop="title"><a href="{% url 'tourists' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">{% trans 'Туристу' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                        <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{{tourist.title}}</span> </div>
+
+                                </section>
+                            </div>
+                            <div class="col-md-3 pamyat_t">
+                                <p>{% trans 'Ваша безопасность - Наша ответственность' %}</p>
+                            </div>
+
+                            <div class="col-md-9">
+                                <div class="oteltopkat hotnomer">
+                                    <p>{% trans 'Горячие номера' %}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>102</span>{% trans 'полиция' %}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>101</span>{% trans 'пожарная' %}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>103</span>{% trans 'скорая'%}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>112</span>{% trans 'служба спасения'%}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+<div class="main-container container">
+
+                <header role="banner" id="page-header">
+
+                </header> <!-- /#page-header -->
+
+                <div class="row">
+
+                    <aside class="col-sm-3" role="complementary">
+                        <div class="region region-sidebar-first well">
+                            <section id="block-views-touristfor-block-1" class="block block-views clearfix">
+
+
+                                <div class="view view-touristfor view-id-touristfor view-display-id-block_1 view-dom-id-8a8a0fc515b0c4ac5c8a04c269979f8e">
+
+
+
+                                    <div class="view-content">
+                                        {% for tourist in tourists %}
+                                        <div class="views-row views-row-1">
+
+                                            <div class="views-field views-field-title"> <span class="field-content"><a href="{{tourist.get_absolute_url}}">{{tourist.title}}</a></span> </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </section>
+                        </div>
+                    </aside> <!-- /#sidebar-first -->
+
+                    <section class="col-sm-9">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{{tourist.title}}</h1>
+                        <section id="block-system-main" class="block block-system clearfix">
+
+
+                            <article id="node-238" class="node node-pamyatka clearfix" about="/kk/for-tourist/zhalpy-kauipsizdik-erezheleri" typeof="sioc:Item foaf:Document">
+                                <header>
+                                    <span property="dc:title" content="Жалпы қауіпсіздік ережелері" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span> </header>
+                                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                                    <div class="field-items">
+                                        <div class="field-item even" property="content:encoded">
+                                            {{tourist.content|safe}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <ul class="links list-inline">
+                                        <li class="translation_ru first"><a href="https://www.visitaqmola.kz/ru/for-tourist/pravila-bezopasnosti" title="Правила безопасности" class="translation-link" xml:lang="ru">RU</a></li>
+                                        <li class="translation_en last"><a href="https://www.visitaqmola.kz/en/for-tourist/safety-rules" title="Safety rules" class="translation-link" xml:lang="en">EN</a></li>
+                                    </ul>
+                                </footer>
+                            </article>
+
+                        </section>
+                </section>
+            </div>
+        </div>
+
+
+{% endblock %}

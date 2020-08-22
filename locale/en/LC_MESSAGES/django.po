@@ -1,0 +1,516 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 18:02+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\rubrics\templates\akmola.html:22 .\rubrics\templates\akmola_detail.html:16
+#: .\rubrics\templates\eat_detail.html:18 .\rubrics\templates\events.html:19
+#: .\rubrics\templates\gallery.html:18 .\rubrics\templates\go_detail.html:18
+#: .\rubrics\templates\news.html:18 .\rubrics\templates\restaraunt.html:24
+#: .\rubrics\templates\search.html:19 .\rubrics\templates\stay.html:22
+#: .\rubrics\templates\stay_detail.html:19 .\rubrics\templates\tourists.html:20
+#: .\rubrics\templates\tourists_detail.html:16
+#: .\rubrics\templates\type_eat.html:24 .\rubrics\templates\type_stay.html:22
+#: .\rubrics\templates\where.html:20
+msgid "Главная"
+msgstr "Home"
+
+#: .\rubrics\templates\akmola.html:23 .\rubrics\templates\akmola.html:34
+msgid "Об Акмолинской области"
+msgstr ""
+
+#: .\rubrics\templates\akmola_detail.html:18 .\rubrics\templates\base.html:53
+msgid "Акмола"
+msgstr "Akmola"
+
+#: .\rubrics\templates\base.html:10
+msgid "ТУРИСТСКИЙ ИНФОРМАЦИОННЫЙ ЦЕНТР АКМОЛИНСКОЙ ОБЛАСТИ"
+msgstr "Tourism Information center in Aqmola"
+
+#: .\rubrics\templates\base.html:54
+msgid "Маршруты"
+msgstr "Tours"
+
+#: .\rubrics\templates\base.html:55 .\rubrics\templates\stay.html:24
+#: .\rubrics\templates\stay.html:104 .\rubrics\templates\stay_detail.html:20
+#: .\rubrics\templates\type_stay.html:24
+msgid "Где остановиться"
+msgstr "Where to stay"
+
+#: .\rubrics\templates\base.html:56 .\rubrics\templates\eat_detail.html:19
+#: .\rubrics\templates\restaraunt.html:26
+#: .\rubrics\templates\restaraunt.html:104 .\rubrics\templates\type_eat.html:28
+msgid "Где поесть"
+msgstr "Where to eat"
+
+#: .\rubrics\templates\base.html:58 .\rubrics\templates\go_detail.html:19
+#: .\rubrics\templates\where.html:21
+msgid "Куда сходить"
+msgstr "Where to go"
+
+#: .\rubrics\templates\base.html:59
+msgid "Мерприятия"
+msgstr "Events"
+
+#: .\rubrics\templates\base.html:60 .\rubrics\templates\tourists.html:21
+#: .\rubrics\templates\tourists.html:90
+#: .\rubrics\templates\tourists_detail.html:17
+msgid "Туристу"
+msgstr "Tourists"
+
+#: .\rubrics\templates\base.html:61
+msgid "Еще"
+msgstr "More"
+
+#: .\rubrics\templates\base.html:65 .\rubrics\templates\news.html:20
+#: .\rubrics\templates\news.html:29
+msgid "Новости"
+msgstr "News"
+
+#: .\rubrics\templates\base.html:66
+#, fuzzy
+#| msgid "команда Visit Aqmola"
+msgid "Команда Visit Aqmola"
+msgstr "Visit Aqmola groups"
+
+#: .\rubrics\templates\base.html:67
+msgid "Фотогалерея"
+msgstr "PhotoGallery"
+
+#: .\rubrics\templates\base.html:95 .\rubrics\templates\base.html:96
+msgid "Изменить"
+msgstr "Change"
+
+#: .\rubrics\templates\base.html:110
+msgid "Поиск"
+msgstr "Search"
+
+#: .\rubrics\templates\base.html:152
+msgid ""
+"Акмолинская область занимает территорию чрезвычайно благоприятную для "
+"развития туристского бизнеса. Большие возможности для развития внутреннего "
+"туризма имеют многие районы области. Имеется развитая сеть домов отдыха, "
+"санаториев, туристических баз, профилакториев, пансионатов и т. д. Щучинско-"
+"Боровская курортная зона – это курортные места с прекрасными природно-"
+"климатическими условиями, богатыми лечебно-рекреационными ресурсами и "
+"историко-культурным фондом, выгодным географическим расположением в центре "
+"Республики, близостью к столице Республики Казахстан г. Нур-Султане. В "
+"будущем она обещает стать крупным современным туристским центром Евразии."
+msgstr ""
+"The region occupies territory extremely favorable for development of tourist "
+"business. Great possibilities have many areas of the region for internal "
+"tourism development. There is a developed network of rest houses, sanatoria, "
+"tourist bases, dispensaries, boarding houses etc. Shchuchinsk-Burabay resort "
+"zone is the resort place with fine natural-climatic conditions rich with "
+"medical-recreational resources and historical and cultural fund, favorable "
+"geographical arrangement in the center of Republic, affinity to Nur-Sultan, "
+"the capital of Kazakhstan Republic. In the future, it promises to become the "
+"great modern tourist center of Eurasia."
+
+#: .\rubrics\templates\base.html:159
+msgid "г. Кокшетау, ул. Акана Серэ, 116А"
+msgstr "116 A, Akana- Seri St., Kokshetau city"
+
+#: .\rubrics\templates\eat_detail.html:45
+#: .\rubrics\templates\restaraunt.html:165 .\rubrics\templates\stay.html:177
+#: .\rubrics\templates\stay_detail.html:52
+#: .\rubrics\templates\type_eat.html:127 .\rubrics\templates\type_stay.html:126
+msgid "отзыв"
+msgstr "review"
+
+#: .\rubrics\templates\eat_detail.html:47
+#: .\rubrics\templates\restaraunt.html:167 .\rubrics\templates\stay.html:179
+#: .\rubrics\templates\stay_detail.html:54
+#: .\rubrics\templates\type_eat.html:129 .\rubrics\templates\type_stay.html:128
+msgid "отзывов"
+msgstr "reviews"
+
+#: .\rubrics\templates\eat_detail.html:53
+#, fuzzy
+#| msgid "Средний чек"
+msgid "Cредний чек"
+msgstr "Middle price"
+
+#: .\rubrics\templates\eat_detail.html:124
+#: .\rubrics\templates\stay_detail.html:130
+msgid "Адрес"
+msgstr "Address"
+
+#: .\rubrics\templates\eat_detail.html:130
+#: .\rubrics\templates\stay_detail.html:136
+msgid "Телефон"
+msgstr "Phone"
+
+#: .\rubrics\templates\eat_detail.html:142
+#: .\rubrics\templates\stay_detail.html:148
+msgid "Описание"
+msgstr "Description"
+
+#: .\rubrics\templates\eat_detail.html:165
+#: .\rubrics\templates\stay_detail.html:172
+msgid "Добавить отзыв"
+msgstr "Add review"
+
+#: .\rubrics\templates\eat_detail.html:168
+#: .\rubrics\templates\stay_detail.html:175
+msgid "Имя"
+msgstr "Name"
+
+#: .\rubrics\templates\eat_detail.html:171
+msgid "Пользователь с данным Email уже оставлял отзыв"
+msgstr "A user with this Email has already left a review"
+
+#: .\rubrics\templates\eat_detail.html:174
+#: .\rubrics\templates\stay_detail.html:181
+#, fuzzy
+#| msgid "отзыв"
+msgid "Отзыв"
+msgstr "review"
+
+#: .\rubrics\templates\eat_detail.html:176
+#: .\rubrics\templates\stay_detail.html:183
+msgid "Отправить"
+msgstr "Send"
+
+#: .\rubrics\templates\eat_detail.html:179
+#: .\rubrics\templates\stay_detail.html:186
+#, fuzzy
+#| msgid "отзыв"
+msgid "Отзывы"
+msgstr "review"
+
+#: .\rubrics\templates\eat_detail.html:190
+#: .\rubrics\templates\stay_detail.html:197
+msgid "Пока никто не оставил отзыва"
+msgstr "So far no one has left a review"
+
+#: .\rubrics\templates\events.html:20 .\rubrics\templates\events.html:29
+#: .\rubrics\templates\where.html:59
+#, fuzzy
+#| msgid "Мерприятия"
+msgid "Мероприятия"
+msgstr "Events"
+
+#: .\rubrics\templates\events.html:45
+msgid "Дата"
+msgstr ""
+
+#: .\rubrics\templates\gallery.html:20 .\rubrics\templates\gallery.html:27
+msgid "Фото"
+msgstr ""
+
+#: .\rubrics\templates\go_detail.html:24 .\rubrics\templates\where.html:26
+msgid "КУДА СХОДИТЬ"
+msgstr ""
+
+#: .\rubrics\templates\go_detail.html:25
+msgid "Проведите время с пользой и удовольствием!"
+msgstr ""
+
+#: .\rubrics\templates\go_detail.html:30 .\rubrics\templates\where.html:32
+msgid "музеев"
+msgstr ""
+
+#: .\rubrics\templates\go_detail.html:33 .\rubrics\templates\where.html:35
+msgid "памятников"
+msgstr ""
+
+#: .\rubrics\templates\go_detail.html:36 .\rubrics\templates\where.html:38
+msgid "достопримичательностей"
+msgstr ""
+
+#: .\rubrics\templates\go_detail.html:39 .\rubrics\templates\where.html:41
+msgid "заповедник"
+msgstr ""
+
+#: .\rubrics\templates\index.html:29
+msgid ""
+" Туристский информационный центр\n"
+"                            <span>Акмолинской области</span> "
+msgstr ""
+
+#: .\rubrics\templates\index.html:32
+msgid "Добро пожаловать!"
+msgstr ""
+
+#: .\rubrics\templates\index.html:45
+msgid "Начните свое путешествие в Акмолинскую область вместе с нами"
+msgstr ""
+
+#: .\rubrics\templates\index.html:46
+msgid "ПОЗНАКОМИТЬСЯ С ОБЛАСТЬЮ ПОБЛИЖЕ"
+msgstr ""
+
+#: .\rubrics\templates\index.html:61
+msgid "Природа"
+msgstr ""
+
+#: .\rubrics\templates\index.html:69
+msgid "География"
+msgstr ""
+
+#: .\rubrics\templates\index.html:77
+msgid "История"
+msgstr ""
+
+#: .\rubrics\templates\index.html:94
+msgid "Выберите один из тысячи маршрутов"
+msgstr ""
+
+#: .\rubrics\templates\index.html:95
+#, fuzzy
+#| msgid "Посмотреть на карте"
+msgid "Посмотреть все маршруты"
+msgstr "View in map"
+
+#: .\rubrics\templates\index.html:107
+msgid "Жемчужина Казахстана - Бурабай"
+msgstr ""
+
+#: .\rubrics\templates\index.html:115
+msgid "В гости к природе"
+msgstr ""
+
+#: .\rubrics\templates\index.html:123
+msgid "Волшебный мир Бурабая"
+msgstr ""
+
+#: .\rubrics\templates\index.html:138
+msgid "Выберите подходящий отель"
+msgstr ""
+
+#: .\rubrics\templates\index.html:139
+#, fuzzy
+#| msgid "Посмотреть на карте"
+msgid "Смотреть все отели"
+msgstr "View in map"
+
+#: .\rubrics\templates\index.html:168
+msgid "Попробуйте местную кухню"
+msgstr ""
+
+#: .\rubrics\templates\index.html:169
+#, fuzzy
+#| msgid "Посмотреть на карте"
+msgid "Посмотреть все заведения"
+msgstr "View in map"
+
+#: .\rubrics\templates\index.html:183
+msgid "Посетите культурные и развлекательные мероприятия"
+msgstr ""
+
+#: .\rubrics\templates\index.html:184
+msgid "СМОТРЕТЬ АФИШУ"
+msgstr ""
+
+#: .\rubrics\templates\index.html:253
+msgid "Памятка туристу поможем провести запоминающийся отдых"
+msgstr ""
+
+#: .\rubrics\templates\index.html:254
+msgid "Полная инструкция"
+msgstr ""
+
+#: .\rubrics\templates\index.html:266
+msgid "Разговорник"
+msgstr ""
+
+#: .\rubrics\templates\index.html:274
+msgid "Правила безопасности"
+msgstr ""
+
+#: .\rubrics\templates\index.html:283
+msgid "Транспорт"
+msgstr ""
+
+#: .\rubrics\templates\restaraunt.html:41 .\rubrics\templates\type_eat.html:45
+msgid "Ресторанов"
+msgstr "Restaurants"
+
+#: .\rubrics\templates\restaraunt.html:44 .\rubrics\templates\type_eat.html:48
+msgid "Кафе"
+msgstr "Cafe"
+
+#: .\rubrics\templates\restaraunt.html:47 .\rubrics\templates\type_eat.html:51
+msgid "Фаст-фуд"
+msgstr "Fast-food"
+
+#: .\rubrics\templates\restaraunt.html:50 .\rubrics\templates\type_eat.html:54
+msgid "Столовые"
+msgstr "Cateens"
+
+#: .\rubrics\templates\restaraunt.html:73 .\rubrics\templates\stay.html:71
+#: .\rubrics\templates\type_eat.html:77 .\rubrics\templates\type_stay.html:71
+msgid " Рекомендации<span>Visit Aqmola</span>"
+msgstr "<span>Visit Aqmola</span> Recomindation"
+
+#: .\rubrics\templates\restaraunt.html:89 .\rubrics\templates\type_eat.html:93
+msgid "Национальная кухня"
+msgstr "National foods"
+
+#: .\rubrics\templates\restaraunt.html:109 .\rubrics\templates\stay.html:109
+msgid "Город"
+msgstr "City"
+
+#: .\rubrics\templates\restaraunt.html:123 .\rubrics\templates\stay.html:122
+msgid "Тип"
+msgstr "Type"
+
+#: .\rubrics\templates\restaraunt.html:136 .\rubrics\templates\stay.html:147
+msgid "Цена"
+msgstr "Price"
+
+#: .\rubrics\templates\restaraunt.html:145 .\rubrics\templates\stay.html:155
+msgid "Искать"
+msgstr "Search"
+
+#: .\rubrics\templates\restaraunt.html:171 .\rubrics\templates\stay.html:183
+#: .\rubrics\templates\type_eat.html:133 .\rubrics\templates\type_stay.html:132
+msgid "Посмотреть на карте"
+msgstr "View in map"
+
+#: .\rubrics\templates\restaraunt.html:175 .\rubrics\templates\stay.html:187
+#: .\rubrics\templates\type_eat.html:137 .\rubrics\templates\type_stay.html:136
+msgid "Средний чек"
+msgstr "Middle price"
+
+#: .\rubrics\templates\search.html:22 .\rubrics\templates\search.html:28
+msgid "Результаты поиска"
+msgstr ""
+
+#: .\rubrics\templates\search.html:30
+msgid "Найдено совпадений"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:30 .\rubrics\templates\type_stay.html:30
+#, fuzzy
+#| msgid ""
+#| "Показаны кафе городов и других населенных пунктов Акмолинской области, а "
+#| "именно города Кокшетау, Щучинско-Боровской курортной зоны (Борового), "
+#| "Зеренды, и т.д. Фильтр слева от данного текста поможет Вам выбрать "
+#| "наиболее подходящее место для трапезы. Для того, чтобы посмотреть кафе/"
+#| "рестораны только определенного города, например, гостиницы Борового, или "
+#| "гостиницы Зеренды, воспользуйтесь основным меню 'Где поесть'."
+msgid ""
+" Показаны гостиницы городов и других населенных пунктов Акмолинской области, "
+"а именно города\n"
+"                        Кокшетау, Щучинско-Боровской курортной зоны "
+"(Борового), Зеренды, и т.д. Фильтр слева от данного\n"
+"                        текста поможет Вам выбрать наиболее подходящую "
+"гостиницу. Для того, чтобы посмотреть гостиницы\n"
+"                        только определенного города, например, гостиницы "
+"Борового, или гостиницы Зеренды, воспользуйтесь\n"
+"                        основным меню 'Где остановиться'.'"
+msgstr ""
+"Showing cafes of cities and other settlements of the Akmola region, namely "
+"the city of Kokshetau, Schuchinsk-Borovsky resort area (Borovoy), Zerenda, "
+"etc. The filter to the left of this text will help you choose the most "
+"suitable place for a meal. In order to see cafes / restaurants of only a "
+"certain city, for example, Borovoye hotel, or Zerenda hotel, use the main "
+"menu 'Where to eat'."
+
+#: .\rubrics\templates\stay.html:39 .\rubrics\templates\type_stay.html:39
+msgid "отелей"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:42 .\rubrics\templates\type_stay.html:42
+msgid "Санаториев"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:45 .\rubrics\templates\type_stay.html:45
+msgid "Гостевых домов"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:48 .\rubrics\templates\type_stay.html:48
+msgid "Зон отдыха"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:135
+msgid "Количество звезд"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:141
+msgid "звезды"
+msgstr ""
+
+#: .\rubrics\templates\stay.html:187 .\rubrics\templates\stay_detail.html:60
+#: .\rubrics\templates\type_stay.html:136
+msgid "тенге"
+msgstr ""
+
+#: .\rubrics\templates\stay_detail.html:60
+#, fuzzy
+#| msgid "Цена"
+msgid "Цена от"
+msgstr "Price"
+
+#: .\rubrics\templates\stay_detail.html:176
+msgid "Введите свое имя.."
+msgstr ""
+
+#: .\rubrics\templates\stay_detail.html:178
+#, fuzzy
+#| msgid "Пользователь с данным Email уже оставлял отзыв"
+msgid "(Пользователь с данным Email уже оставлял отзыв)"
+msgstr "A user with this Email has already left a review"
+
+#: .\rubrics\templates\stay_detail.html:180
+msgid "Введите свой email.."
+msgstr ""
+
+#: .\rubrics\templates\stay_detail.html:182
+#, fuzzy
+#| msgid "Добавить отзыв"
+msgid "Введите отзыв.."
+msgstr "Add review"
+
+#: .\rubrics\templates\tourists.html:26
+#: .\rubrics\templates\tourists_detail.html:23
+msgid "Ваша безопасность - Наша ответственность"
+msgstr ""
+
+#: .\rubrics\templates\tourists.html:31
+#: .\rubrics\templates\tourists_detail.html:28
+msgid "Горячие номера"
+msgstr ""
+
+#: .\rubrics\templates\tourists.html:37
+#: .\rubrics\templates\tourists_detail.html:34
+msgid "пожарная"
+msgstr ""
+
+#: .\rubrics\templates\tourists.html:40
+#: .\rubrics\templates\tourists_detail.html:37
+msgid "скорая"
+msgstr ""
+
+#: .\rubrics\templates\tourists.html:43
+msgid "Служба спасенияия"
+msgstr ""
+
+#: .\rubrics\templates\tourists_detail.html:31
+msgid "полиция"
+msgstr ""
+
+#: .\rubrics\templates\tourists_detail.html:40
+msgid "служба спасения"
+msgstr ""
+
+#: .\rubrics\templates\where.html:27
+msgid "Проведите время с пользой и удовольствием"
+msgstr ""

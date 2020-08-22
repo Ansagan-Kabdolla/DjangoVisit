@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load filters %}
+
+
+{% block body_taq %}
+class = "html not-front not-logged-in no-sidebars page-about-aqmola i18n-kk"
+{% endblock %}
+
+    {% block content %}
+
+
+<div class="main-container container page-about-aqmola">
+
+                <header role="banner" id="page-header">
+
+                    <div class="region region-header">
+                        <section id="block-easy-breadcrumb-easy-breadcrumb easy-breadcrumb_black" class="block block-easy-breadcrumb clearfix">
+
+
+                            <div itemscope="" class="easy-breadcrumb">
+                                <span itemprop="title"><a href="{% url 'index' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-front easy-breadcrumb_black">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Об Акмолинской области' %}</span> </div>
+
+                        </section>
+                    </div>
+                </header> <!-- /#page-header -->
+
+                <div class="row">
+
+
+                    <section class="col-sm-12">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{% trans 'Об Акмолинской области' %}</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+                                <div class="view view-akmola view-id-akmola view-display-id-page_1 view-dom-id-32426efc8b893929902e838112521697">
+                                    <div class="view-content aq_content">
+                                        {% for ak in aks %}
+                                        <div class="views-row views-row-1 views-row-odd  {% cycle 'views-row views-row-1 views-row-odd views-row-first aq_content_item aq_content_item_odd' 'views-row views-row-2 views-row-even aq_content_item aq_content_item_even' %} ">
+                                            <div class="col-md-5 aq_content_field_img">
+                                                <div class="views-field views-field-field-materialimg aq_content_field aq_content_field_img">
+                                                    <div class="field-content"><img typeof="foaf:Image" class="img-responsive" src="{{ak.thumbnail.url}}" width="416" height="227" alt=""></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 {% cycle 'aq_content_item_odd_item' '' %} ">
+                                                <div class="views-field views-field-title aq_content_field aq_content_field_title"> <span class="field-content"><a href="{{ ak }}">{{ak.title}}</a></span> </div>
+                                                <div class="views-field views-field-body aq_content_field aq_content_field_text">
+                                                    <div class="field-content">
+                                                        <p>{{ak.short_description}}
+                                                            <!--
+                                                         Жазы қысқа және жылы, ал қысы ұзақ, ызғарлы желдері мен ұйытқыған борандары араласқан аязды болады. Ауаның ең төменгі температурасы минус 40С жоғары, ең жоғарғы температурасы + 40С жетеді.
+                                                        Өсімдіктері, әсіресе облыстың солтүстік бөлігінде өзінің алуан түрлігімен және тиісті ландшафтымен, атап айтқанда қарағайлы- қайыңды ормандарымен және тау беткейлерін көмкерген түрлі өсімдіктерімен ерекшеленеді. Таулы қарағайлы орман – облыстың&nbsp;байлығы.
+-->
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="views-field views-field-body aq_content_field_btn">
+                                                    <div class="field-content">
+                                                        <a class="btn_border btn btn-primary content_btn" href="{{ak.get_absolute_url}}">Толығырақ оқу</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+{% endblock %}

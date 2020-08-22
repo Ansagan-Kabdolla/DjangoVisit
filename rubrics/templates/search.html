@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load filters %}
+
+{% block body_taq %}
+class = "html not-front not-logged-in no-sidebars page-news i18n-kk"
+{% endblock %}
+
+    {% block content %}
+
+        <div class="main-container container">
+
+            <header role="banner" id="page-header">
+
+                <div class="region region-header">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+                        <div itemscope="" class="easy-breadcrumb">
+                            <span itemprop="title"><a href="{% url 'index' %}"
+                                                      class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span>
+                            <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title"
+                                  itemprop="title">{% trans 'Результаты поиска' %}</span></div>
+                    </section>
+                </div>
+            </header>
+            <div class="row">
+                <section class="col-sm-12">
+                    <h1 class="page-header" style="display:block">{% trans 'Результаты поиска' %}:{{query}} </h1>
+                    <div class="search_content">
+                        <p class="search_count">{% trans 'Найдено совпадений' %}: {{result_count}} </p>
+                        {% for i in object_list %}
+                        <div class="search_content_item search_stay">
+                            <div class="search_item_text col-md-8 col-sm-12">
+                                <a href="{{i.get_absolute_url}}"><h3 class="search_item_title">{{i.title}}</h3></a>
+                                <p class="search_item_desc">{% if i.short_description %}{{i.short_description}}{% else %} {{i.content|safe|ShortDesc:150}} {% endif %}</p>
+
+                            </div>
+                            <div class="col-md-4 col-sm-12 search_img_area">
+                                <img src="{{i.thumbnail.url}}" alt="PHOTO" class="search_item_img">
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+
+<nav aria-label="Page navigation example pagination_nav">
+                                    <div class="pagination_area">
+
+
+                                        {% if object_list.has_previous %}
+                                        <div class="page_prev">
+                <a class="page-link page_link_prev" href="search?q={{query}}&page={{ object_list.previous_page_number }}">Пред.</a>
+                                        </div>
+                                            {% else %}
+                                        <div class="page_prev disabled">
+                <a class="page-link page_link_prev" href="#">Пред.</a>
+                                        </div>
+        {% endif %}
+
+
+                                        <ul class="pagination justify-content-center">
+
+                                            {% if object_list.has_previous %}
+                                        <li class="page-item page-item_1">
+                                            <a class="page-link page_number" href="search?q={{query}}&page={{ object_list.previous_page_number }}">{{object_list.previous_page_number}}</a>
+                                        </li>
+                                            {% endif %}
+
+
+                                        <li class="page-item page-item_1 active"><a class="page-link page_number" href="search?q={{query}}&page={{ object_list.number }}">{{object_list.number}}</a></li>
+
+                                            {% if object_list.has_next %}
+                                        <li class="page-item page-item_1">
+                                            <a class="page-link page_number" href="search?q={{query}}&page={{ object_list.next_page_number }}">{{object_list.next_page_number}}</a>
+                                        </li>
+                                            {% endif %}
+                                        </ul>
+
+                                            {% if object_list.has_next %}
+                                        <div class="page_next">
+                <a class="page-link page_link_next" href="search?q={{query}}&page={{ object_list.next_page_number }}">След.</a>
+                                        </div>
+                                            {% else %}
+                                        <div class="page_next disabled">
+                <a class="page-link page_link_next" href="#">След.</a>
+                                        </div>
+        {% endif %}
+
+
+                                    </div>
+                                </nav>
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+{% endblock %}

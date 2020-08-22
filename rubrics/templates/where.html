@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block body_taq %}
+class="html not-front not-logged-in no-sidebars page-where-to-go wtg i18n-kk"
+{% endblock %}
+
+    {% block content %}
+            <div class="region region-widthcon page-where-to-go">
+                <section id="block-block-13" class="block block-block clearfix">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 krohi">
+                                <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+
+
+                                    <div itemscope="" class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb">
+                                        <span itemprop="title"><a href="{% url 'index' %}">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                        <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Куда сходить' %}</span> </div>
+
+                                </section>
+                            </div>
+                            <div class="col-md-3 pamyat_t">
+                                <p>{% trans 'КУДА СХОДИТЬ' %}<br>
+                                    {% trans 'Проведите время с пользой и удовольствием' %}!</p>
+                            </div>
+
+                            <div class="col-md-9">
+                                <div class="oteltopkat">
+                                    <p><span>{{count_museum}}</span>{% trans 'музеев' %}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>{{count_monument}}</span>{% trans 'памятников' %}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>{{count_showplace}}</span>{% trans 'достопримичательностей' %}</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>{{count_zapovednik}}</span>{% trans 'заповедник' %}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <div class="main-container container page-where-to-go">
+
+                <div class="row">
+
+
+                    <section class="col-sm-12">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{% trans 'Мероприятия' %}</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+                                <div class="view view-events view-id-events view-display-id-page_1 view-dom-id-d01f5e2ed505510a58c57788cfb56799 jquery-once-1-processed">
+
+                                    <div class="view-content content">
+                                        {% for go in to_go %}
+                                        <div class="views-row views-row-1 views-row-odd content_item">
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="event_page_b">
+                                                        <div class="imgtimer"><img typeof="foaf:Image" class="img-responsive event_img" src="{{ go.thumbnail.url }}" width="325" height="215" alt=""></div>
+                                                        <div class="event_zagol">
+                                                            <p><a href="{% url 'go_detail' pk=go.pk %}">{{go.title}}</a></p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </span> </div>
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
+
+                                    <ul class="pager pager--infinite-scroll ">
+                                        <li class="pager__item">
+                                            {% include "includes/pagination.html" with page=to_go %}
+                                            <!--<a href="#">показать еще</a> </li>-->
+                                    </ul>
+
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        {% endblock %}

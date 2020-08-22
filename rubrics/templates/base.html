@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://www.visitaqmola.kz/sites/default/files/favicon.png" type="image/png">
+    <script charset="utf-8" src="https://api-maps.yandex.ru/services/coverage/v2/?l=map&amp;ll=69.36689500,53.28330200&amp;z=16&amp;lang=ru_RU&amp;callback=jsonp_yandex_coverage__l_map_ll_69_36689500_53_28330200_z_16_lang_ru_RU"></script>
+    <meta charset="UTF-8">
+    <title>{% trans 'ТУРИСТСКИЙ ИНФОРМАЦИОННЫЙ ЦЕНТР АКМОЛИНСКОЙ ОБЛАСТИ' %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.css" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.css" media="all">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/slick.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="{% static 'libs/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/slick.js' %}"></script>
+    <script src="https://kit.fontawesome.com/003b636a5f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.js"></script>
+    <script src="https://dikushan00.github.io/js/FotoArea.js" ></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<1a554514-f1db-44dc-a2f5-a00ae4bf7a91>&amp;lang=ru_RU" type="text/javascript">
+    </script>
+
+</head>
+
+
+<body {% block body_taq %} class="html not-front not-logged-in no-sidebars i18n-kk" {% endblock %}>
+    <div class="wrapper">
+        {% block swipe %}{% endblock %}
+
+        <div class="site_content">
+            <div class="home block_area" id="home">
+                <header id="navbar" role="banner" class="header navbar navbar-default">
+                    <div class="container home_container">
+                        <div class="navbar-header">
+                            <a class="logo navbar-btn pull-left" href="{% url 'index' %}" title="Басты">
+                                <img src="{% static 'img/Logo.png' %}" alt="Басты">
+                            </a>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse" id="navbar-collapse">
+                            <nav role="navigation" class="navigation">
+                                <ul class="menu nav navbar-nav">
+                                    <li class="menu_item first leaf"><a href="{% url 'akmola' %}" title="" class="menu_item_link">{% trans 'Акмола' %}</a></li>
+                                    <li class="menu_item leaf"><a href="{% url 'tours' %}" class="menu_item_link">{% trans 'Маршруты' %}</a></li>
+                                    <li class="menu_item leaf"><a href="{% url 'stay' %}" title="" class="menu_item_link">{% trans 'Где остановиться' %}</a></li>
+                                    <li class="menu_item leaf"><a href="{% url 'eat' %}" title="" class="menu_item_link">{% trans 'Где поесть' %}
+                                        </a></li>
+                                    <li class="menu_item menu_item leaf"><a href="{% url 'go' %}" title="" class="menu_item_link">{% trans 'Куда сходить' %}</a></li>
+                                    <li class="menu_item leaf"><a href="{% url 'events' %}" title="" class="menu_item_link">{% trans 'Мерприятия' %}</a></li>
+                                    <li class="menu_item leaf"><a href="{% url 'tourists' %}" title="" class="menu_item_link">{% trans 'Туристу' %}</a></li>
+                                    <li class="menu_item last expanded dropdown"><a href="http://example.com/" title="" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Еще' %}
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="menu_item leaf"><a href="{% url 'news' %}" title="">{% trans 'Новости' %}</a></li>
+                                            <li class="first leaf"><a href="{% url 'comanda' %}" title="">{% trans 'Команда Visit Aqmola' %}</a></li>
+                                            <li class="last leaf"><a href="{% url 'gallery' %}" title="">{% trans 'Фотогалерея' %}</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="">
+
+                                    <section id="block-locale-language" class="block block-locale clearfix">
+                                        <ul class="language-switcher-locale-url">
+                                            {% get_current_language as LANGUAGE_CODE %}
+                                            {% get_available_languages as LANGUAGES %}
+                                            {% get_language_info_list for LANGUAGES as languages %}
+                                            {% for language in languages %}
+                                            <li class="language_li {{language.code}} {% if language.code == LANGUAGE_CODE %} active {% endif %}>"><a href="" class="language-link" data-lang="{{language.code}}">{{language.code|upper}}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </section>
+                                    <form action="{% url 'set_language' %}" method="post" class="switch_lang_form"  style="display: none">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+
+                        <select name="language" class="selectLang">
+
+                            {% for language in languages %}
+                                <option class="selectLangOption" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                        selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" class="toggleLangBtn" value="{% trans 'Изменить' %}">
+                                        <input type="submit" class="toggleLangBtn" value="{% trans 'Изменить' %}">
+                    </form>
+                                    <section id="block-search-form" class="block block-search clearfix">
+                                        <a class="form_toggle_btn"><i class="fas fa-search" aria-hidden="true"></i></a>
+                                        <form class="form-search content-search" action="{% url 'search' %}" method="get" id="search-block-form"  accept-charset="UTF-8">
+                                            <div>
+                                                <div>
+                                                    <h2 class="element-invisible">Search form</h2>
+                                                    <div class="input-group">
+                                                            <input title="Enter the terms you wish to search for." placeholder="Search" class="form-control form-text" autocomplete="off" type="text" id="edit-search-block-form--2" name="q" value="" size="15" maxlength="128">
+                                                            <span class="input-group-btn">
+                                                                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                                                            </span>
+                                                    </div>
+                                                    <div class="form-actions form-wrapper form-group" id="edit-actions"><button class="element-invisible btn btn-primary form-submit" type="submit" id="edit-submit" name="op" value="Search">{% trans 'Поиск' %}</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                {% block from_header %}{% endblock %}
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="region region-footer">
+                    <section id="block-block-9" class="block block-block clearfix">
+
+                        <div class="row footer_first">
+                            <div class="col-md-5">
+                                <div class="footcos">
+                                    <img src="{% static 'img/vlf.png' %}">
+                                    <div class="footcos2">
+                                        <a href="https://vk.com/public185677668">
+                                            <i class="fab fa-vk"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UCmVzmTwxP-_CbfbS2GmSJcA?view_as=subscriber">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/visitaqmola.kz/">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/visitaqmola.kz/">
+                                            <i class="fab fa-facebook"></i>
+                                        </a><a href="https://www.visitaqmola.kz/">
+                                            <i class="fab fa-twitter"></i>
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <p>{% trans 'Акмолинская область занимает территорию чрезвычайно благоприятную для развития туристского бизнеса. Большие возможности для развития внутреннего туризма имеют многие районы области. Имеется развитая сеть домов отдыха, санаториев, туристических баз, профилакториев, пансионатов и т. д. Щучинско-Боровская курортная зона – это курортные места с прекрасными природно-климатическими условиями, богатыми лечебно-рекреационными ресурсами и историко-культурным фондом, выгодным географическим расположением в центре Республики, близостью к столице Республики Казахстан г. Нур-Султане. В будущем она обещает стать крупным современным туристским центром Евразии.' %}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 footcontact">
+                                <div class="footcontact_content">
+                                    <p>{% trans 'г. Кокшетау, ул. Акана Серэ, 116А' %}</p>
+                                    <p class="yablolink">+7 (708) 801 00 00</p>
+                                    <p class="yablolink">+7 (7162) 91 18 16</p>
+                                    <p>info@visitaqmola.kz</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<script>
+    $(document).ready(function () {
+        var fotoArea = new FotoArea();
+        fotoArea.render($('.foto_list'));
+
+        $(".pagination_area").on("click", function (e) {
+            e.preventDefault();
+            fotoArea.addFoto(e.target.classList.value, e.target.innerText);
+        })
+    })
+
+    $(".page_link_prev").on("click", function(e){ console.log(e.target.classList.value) })
+
+</script>
+<script>
+        let toggleBtn = $(".toggleLangBtn");
+        let selectLangOptions = $(".selectLangOption");
+        let languageLi = $(".language_li");
+
+        $(document).on("click", ".language-link", function (e) {
+            e.preventDefault();
+            let select_lang = e.target.dataset.lang
+            //console.log()
+
+            for(let key of languageLi){
+                if(key.classList.contains("active")){
+                    key.classList.remove("active")
+                }
+                //key.parentNode.classList.remove("active")
+            }
+            e.target.parentNode.classList.add("active")
+
+            for(let key of selectLangOptions){
+                if(key.hasAttribute("selected")){
+                    key.removeAttribute("selected")
+                }
+                if(key.value == select_lang){
+                    let submit = true
+                    key.setAttribute("selected", "selected");
+                    toggleBtn.click()
+                }
+            }
+        })
+    </script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

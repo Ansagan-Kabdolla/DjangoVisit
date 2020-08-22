@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="main-container container page-news">
+
+    <header role="banner" id="page-header">
+    </header>
+
+    <div class="row">
+        <section class="col-sm-12">
+            <h1 class="page-header"></h1>
+            <div class="region region-content">
+                <div class="col-md-8">
+                    <header class="news_header">
+                        <h1 class="news_header_title">{{new.title}}</h1>
+                        <p class="news_header_desc">{{new.date}}</p>
+                    </header>
+                    <div class="news_content">
+                        <img src="{{new.thumbnail.url}}" alt="PHOTO" class="news_content_img">
+
+                        {{new.content|safe}}
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="news_list news_list_in">
+                        {% for n in news %}
+                        <li class="news_list_item float">
+                                <div>
+                                            <img src="{{n.thumbnail.url}}" alt="PHOTO" class="news_list_img">
+                                            <a href="{{n.get_absolute_url}}" class="news_item_link"><h5 class="news_title">{{n.title}}</h5>
+                                            </a>
+                                </div>
+                                <span class="news_date">{{n.date}}</span>
+
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

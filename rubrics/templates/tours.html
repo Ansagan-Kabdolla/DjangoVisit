@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body_taq %}
+class="html not-front not-logged-in one-sidebar sidebar-first page-tours i18n-kk"
+{% endblock %}
+
+
+    {% block content %}
+
+<div class="main-container container page-tours">
+
+            <header role="banner" id="page-header">
+
+                <div class="region region-header">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+                        <div itemscope="" class="easy-breadcrumb easy-breadcrumb_black">
+                            <span itemprop="title"><a href="{% url 'index' %}">Главная</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Маршруты</span>
+                        </div>
+
+                    </section>
+                </div>
+            </header> <!-- /#page-header -->
+
+            <div class="row">
+
+                <aside class="col-sm-3" role="complementary">
+                    <div class="region region-sidebar-first well">
+                        <section id="block-views-marshrutru-block-1" class="block block-views clearfix">
+                            <div class="view view-marshrutru view-id-marshrutru view-display-id-block_1 view-dom-id-0a3df24231ecb3a937b0133f83f05f1d">
+                                <div class="view-content">
+                                    {% for tour in tours %}
+                                    <div class="views-row views-row-1 views-row-odd views-row-first">
+                                        <div class="views-field views-field-title"><span class="field-content"><a href="{{ tour.get_absolute_url }}" class="active">{{tour.title}}</a></span></div>
+                                    </div>
+
+
+                                    {% endfor %}
+                                    {% if len > 5 %}
+                                    <span class="more_ways_span">
+                                        <img src="{% static '/libs/next.svg' %}" class="more_ways_btn" style="transform: rotate(90deg); width: 25px; position: absolute; left: 50%; margin-left: -13px; cursor: pointer;" alt="PHOTO">
+                                    </span>
+                                    {% endif %}
+                                   <!-- <span class="more_ways_span"><img src="https://dikushan00.github.io/libs/next.svg" class="more_ways_btn" style="transform: rotate(90deg); width: 25px; position: absolute; left: 50%; margin-left: -13px; cursor: pointer;" alt="PHOTO"></span>-->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+                <section class="col-sm-9">
+                    <a id="main-content"></a>
+                    <h1 class="page-header">Маршруты</h1>
+                    <div class="region region-content">
+                        <section id="block-system-main" class="block block-system clearfix">
+
+
+                            <article id="node-4" class="node node-marshrut clearfix" about="/ru/tours/volshebnyy-mir-burabaya" typeof="sioc:Item foaf:Document">
+                                <header>
+                                    <span property="dc:title" content="Волшебный мир Бурабая" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+                                </header>
+                                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                                    <div class="field-items">
+                                        <div class="field-item even" property="content:encoded">
+
+
+                                            <div class="view view-marshrutru view-id-marshrutru view-display-id-page_1 view-dom-id-e08f0e1d2147d1d764ce3e5e6fba056a">
+
+
+                                                <div class="view-content marsh_item">
+                                                    {% for tour in short_tours %}
+                                                    <div class="views-row views-row-1 views-row-odd views-row-first marsh_item">
+
+                                                        <div class="views-field views-field-nothing"> <span class="field-content">
+                                                                    <div class="akmo"><a href="{{tour.get_absolute_url}}"><img typeof="foaf:Image" class="img-responsive" src="{{tour.thumbnail.url}}" width="416" height="227" alt=""><p class="event_title">{{tour.title}}</p></a></div>
+                                                                </span></div>
+                                                    </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <ul class="links list-inline">
+                                        <li class="translation_kk first"><a href="https://www.visitaqmola.kz/kk/tours/kazakstannyn-inzhu-marzhany-burabay" title="Қазақстанның інжу-маржаны – Бурабай" class="translation-link" xml:lang="kk">KZ</a>
+                                        </li>
+                                        <li class="translation_en last"><a href="https://www.visitaqmola.kz/en/tours/burabay-pearl-kazakhstan" title="Burabay Pearl of Kazakhstan" class="translation-link" xml:lang="en">EN</a>
+                                        </li>
+                                    </ul>
+                                </footer>
+                            </article>
+
+                        </section>
+                    </div>
+                </section>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+{% endblock %}

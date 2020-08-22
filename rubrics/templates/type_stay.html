@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load filters %}
+
+{% block body_taq %}
+class="html not-front not-logged-in one-sidebar sidebar-first page-where-to-stay wts i18n-kk"
+{% endblock %}
+
+{% block content %}
+
+
+<div class="region region-widthcon page-where-to-stay">
+    <section id="block-block-10" class="block block-block clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 krohi">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+
+
+                        <div itemscope="" class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <span itemprop="title"><a href="{% url 'index' %}">{% trans 'Главная' %}</a></span> <span
+                                class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Где остановиться' %}</span>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="col-md-6">
+                    <p>{% blocktrans %} Показаны гостиницы городов и других населенных пунктов Акмолинской области, а именно города
+                        Кокшетау, Щучинско-Боровской курортной зоны (Борового), Зеренды, и т.д. Фильтр слева от данного
+                        текста поможет Вам выбрать наиболее подходящую гостиницу. Для того, чтобы посмотреть гостиницы
+                        только определенного города, например, гостиницы Борового, или гостиницы Зеренды, воспользуйтесь
+                        основным меню 'Где остановиться'.'{% endblocktrans %}</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="oteltopkat">
+                        <p><span>{{stay_count_otel}}</span>{% trans 'отелей' %}</p>
+                    </div>
+                    <div class="oteltopkat">
+                        <p><span>{{stay_count_sanat}}</span>{% trans 'Санаториев' %}</p>
+                    </div>
+                    <div class="oteltopkat">
+                        <p><span>{{stay_count_gostdom}}</span>{% trans 'Гостевых домов' %}</p>
+                    </div>
+                    <div class="oteltopkat">
+                        <p><span>{{stay_count_zona}}</span>{% trans 'Зон отдыха' %}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="main-container container page-where-to-stay">
+
+    <header role="banner" id="page-header">
+
+    </header> <!-- /#page-header -->
+
+    <div class="row">
+
+        <aside class="col-sm-3" role="complementary">
+            <div class="region region-sidebar-first well">
+                <section id="block-views-wheretostay-block-1" class="block block-views clearfix">
+
+                    <h2 class="block-title">
+                        <div class="reczagol">{% blocktrans %} Рекомендации<span>Visit Aqmola</span>{% endblocktrans %}
+                        </div>
+                    </h2>
+
+                    <div class="view view-wheretostay view-id-wheretostay view-display-id-block_1 view-dom-id-6839b83dd6345bf7e67dc10c194f0686 jquery-once-1-processed">
+                        <div class="view-content">
+                            {% for hotel in hotels %}
+                            <div class="views-row views-row-1 views-row-odd views-row-first">
+
+                                <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="rekomen">
+                                                        <a href="{% url 'top_stay' hotel.slug %}">
+                                                            <div>
+                                                                 <img typeof="foaf:Image" class="img-responsive"
+                                                                      src="{{hotel.thumbnail.url}}"
+                                                                      width="360" height="235" alt="">
+                                                                <p>{{ hotel.title }}</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </span>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <section class="col-sm-9">
+            <a id="main-content"></a>
+            <h1 class="page-header">{{type}}</h1>
+            <div class="region region-content">
+                <section id="block-system-main" class="block block-system clearfix">
+
+
+                    <div class="view view-wheretostay view-id-wheretostay view-display-id-page_1 view-dom-id-7dd76386d257dd500f018b79bcf492b4 jquery-once-1-processed">
+                        <div class="view-content">
+                            {% for stay in stays %}
+                            <div class="views-row views-row-{{stay.id}} views-row-odd views-row-first dr_content_item">
+                                <div class="views-field views-field-nothing">
+                                   <span class="field-content">
+                                    <div class="row">
+                                        <div class="col-md-4 col-xs-12 blo_imghei"><img
+                                                typeof="foaf:Image" src="{{ stay.thumbnail.url }}"
+                                                width="280" height="222" alt=""></div>
+                                        <div class="col-md-5 zg_block"><a href="../tmp/kafe.html"
+                                                                          typeof="skos:Concept"
+                                                                          property="rdfs:label skos:prefLabel">{{ stay.get_type_display }}</a>
+                                            <div class="zg_hotel"><a
+                                                    href="{% url 'stay_detail' stay.pk %}">{{ stay.title }}</a></div>
+                                            {% with stay.reviews.count as count %}
+                                            {% if count == 1 %}
+                                            <div class="kolvo">{{ stay.reviews.count }} {% trans 'отзыв' %}</div>
+                                            {% else %}
+                                            <div class="kolvo">{{ stay.reviews.count }} {% trans 'отзывов' %}</div>
+                                            {% endif %}
+                                            {% endwith %}
+                                            <p><img style="margin-top: -5px; margin-right: 5px;"
+                                                    src="{% static 'img/nakarte.png' %}">{% trans 'Посмотреть на карте' %}</p>
+                                        </div>
+                                        <div class="col-md-3 cena_block">
+                                            <div class="cena_hotel">
+                                                <p>{% trans 'Средний чек' %}: <span>{{stay.price}}</span>{% trans 'тенге' %}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   </span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% include "includes/pagination.html" with page=stays %}
+                            <!--<ul class="pager pager--infinite-scroll ">
+                                <li class="pager__item">
+                                    <a href="https://www.visitaqmola.kz/ru/where-to-stay?page=1">Еще</a> </li>
+                            </ul>-->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+
+
+<nav aria-label="Page navigation example pagination_nav">
+                                    <div class="pagination_area">
+
+
+                                        {% if page.has_previous %}
+                                        <div class="page_prev">
+                <a class="page-link page_link_prev" href="?{{city_list}}{{type_list}}{{stars_list}}{% if MinPrice %}MinPrice={{MinPrice}}&{% endif %}{% if MaxPrice %}MaxPrice={{MaxPrice}}&{% endif %}page={{ page.previous_page_number }}">Пред.</a>
+                                        </div>
+                                            {% else %}
+                                        <div class="page_prev disabled">
+                <a class="page-link page_link_prev" href="#">Пред.</a>
+                                        </div>
+        {% endif %}
+
+
+                                        <ul class="pagination justify-content-center">
+
+                                            {% if page.has_previous %}
+                                        <li class="page-item page-item_1">
+                                            <a class="page-link page_number" href="?{{city_list}}{{type_list}}{{stars_list}}{% if MinPrice %}MinPrice={{MinPrice}}&{% endif %}{% if MaxPrice %}MaxPrice={{MaxPrice}}&{% endif %}page={{ page.previous_page_number }}">{{page.previous_page_number}}</a>
+                                        </li>
+                                            {% endif %}
+
+
+                                        <li class="page-item page-item_1 active"><a class="page-link page_number" href="?{{city_list}}{{type_list}}{{stars_list}}{% if MinPrice %}MinPrice={{MinPrice}}&{% endif %}{% if MaxPrice %}MaxPrice={{MaxPrice}}&{% endif %}page={{ page.number }}">{{page.number}}</a></li>
+
+                                            {% if page.has_next %}
+                                        <li class="page-item page-item_1">
+                                            <a class="page-link page_number" href="?{{city_list}}{{type_list}}{{stars_list}}{% if MinPrice %}MinPrice={{MinPrice}}&{% endif %}{% if MaxPrice %}MaxPrice={{MaxPrice}}&{% endif %}page={{ page.next_page_number }}">{{page.next_page_number}}</a>
+                                        </li>
+                                            {% endif %}
+                                        </ul>
+
+                                            {% if page.has_next %}
+                                        <div class="page_next">
+                <a class="page-link page_link_next" href="?{{city_list}}{{type_list}}{{stars_list}}{% if MinPrice %}MinPrice={{MinPrice}}&{% endif %}{% if MaxPrice %}MaxPrice={{MaxPrice}}&{% endif %}page={{ page.next_page_number }}">След.</a>
+                                        </div>
+                                            {% else %}
+                                        <div class="page_next disabled">
+                <a class="page-link page_link_next" href="#">След.</a>
+                                        </div>
+        {% endif %}
+
+
+                                    </div>
+                                </nav>

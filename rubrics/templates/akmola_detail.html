@@ -1,0 +1,60 @@
+
+{% extends 'base.html' %}
+{% load static i18n%}
+    {% block content %}
+
+
+<div class="main-container container page-about-aqmola">
+
+                <header role="banner" id="page-header">
+
+                    <div class="region region-header">
+                        <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+
+
+                            <div itemscope="" class="easy-breadcrumb">
+                                <span itemprop="title"><a href="{% url 'index' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                <span class="easy-breadcrumb_segment easy-breadcrumb_segment-1" itemprop="title">
+                                    <a href="{% url 'akmola' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Акмола' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{{akm.title}}</span> </div>
+
+                        </section>
+                    </div>
+                </header> <!-- /#page-header -->
+
+                <div class="row">
+
+
+                    <section class="col-sm-12">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{{akm.title}}</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+
+
+                                <article id="node-251" class="node node-akmola clearfix" about="/kk/akmola/tabigat" typeof="sioc:Item foaf:Document">
+                                    <header>
+                                        <span property="dc:title" content="Табиғат" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span> </header>
+                                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                                        <div class="field-items">
+                                            <div class="field-item even" property="content:encoded">
+                                                {{akm.content|safe}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <footer>
+                                        <ul class="links list-inline">
+                                            <li class="translation_ru first"><a href="https://www.visitaqmola.kz/ru/akmola/priroda" title="Природа" class="translation-link" xml:lang="ru">RU</a></li>
+                                            <li class="translation_en last"><a href="https://www.visitaqmola.kz/en/akmola/nature" title="Nature" class="translation-link" xml:lang="en">EN</a></li>
+                                        </ul>
+                                    </footer>
+                                </article>
+
+                            </section>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+{% endblock %}

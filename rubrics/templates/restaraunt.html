@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load filters %}
+
+
+{% block body_taq %}
+ class = "html not-front not-logged-in one-sidebar sidebar-first page-where-to-eat wte i18n-kk"
+{% endblock %}
+
+{% block content %}
+<div class="region region-widthcon page-where-to-eat wte">
+    <section id="block-block-14" class="block block-block clearfix">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 krohi">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+
+
+                        <div itemscope="" class="easy-breadcrumb" itemtype="#">
+                            <span itemprop="title"><a href="{% url 'index' %}"
+                                                      class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span>
+                            <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Где поесть' %}</span>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="col-md-6">
+                    <p>{% trans 'Показаны кафе городов и других населенных пунктов Акмолинской области, а именно города
+                        Кокшетау, Щучинско-Боровской курортной зоны (Борового), Зеренды, и т.д. Фильтр слева от данного
+                        текста поможет Вам выбрать наиболее подходящее место для трапезы. Для того, чтобы посмотреть
+                        кафе,рестораны только определенного города, например, гостиницы Борового, или гостиницы Зеренды,
+                        воспользуйтесь основным меню 'Где поесть'.' %}</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="oteltopkat">
+                        <p><span>{{count_restoran}}</span>{% trans 'Ресторанов' %}</p>
+                    </div>
+                    <div class="oteltopkat">
+                        <p><span>{{count_cafe}}</span>{% trans 'Кафе' %}</p>
+                    </div>
+                    <div class="oteltopkat">
+                        <p><span>{{count_fast_food}}</span>{% trans 'Фаст-фуд' %}</p>
+                    </div>
+                    <div class="oteltopkat">
+                        <p><span>{{count_stolovaia}}</span>{% trans 'Столовые' %}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="main-container container page-where-to-eat wte">
+
+    <header role="banner" id="page-header">
+
+    </header> <!-- /#page-header -->
+
+    <div class="row">
+
+        <aside class="col-sm-3" role="complementary">
+            <div class="region region-sidebar-first well">
+                <section id="block-views-gdepozhrat-block-1" class="block block-views clearfix">
+
+                    <h2 class="block-title">
+                        <div class="reczagol">{% blocktrans %} Рекомендации<span>Visit Aqmola</span>{% endblocktrans %}
+                        </div>
+                    </h2>
+
+                    <div class="view view-gdepozhrat view-id-gdepozhrat view-display-id-block_1 view-dom-id-90a9e8d506fdafc95ecc15ebaab6660a">
+
+
+                        <div class="view-content">
+                            <div class="views-row views-row-1 views-row-odd views-row-first views-row-last dr_content_item">
+                                <div class="views-field views-field-nothing">
+                                    <span class="field-content">
+                                        <div class="rekomen"><a href="{% url 'national_foods' %}">
+                                            <div>
+                                            <img typeof="foaf:Image" class="img-responsive"
+                                                 src="{{foods.thumbnail.url}}"
+                                                 width="360" height="235" alt="">
+                                                <p>{% trans 'Национальная кухня' %}</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </aside> <!-- /#sidebar-first -->
+
+        <section class="col-sm-9">
+            <a id="main-content"></a>
+            <h1 class="page-header">{% trans 'Где поесть' %}</h1>
+            <form action="{% url 'filtering' %}" method="GET" name="filter">
+                <div class="filter_obj restaraunt_filter">
+                    <div class="filter_content">
+                        <div class="select_city_area filter_item_area">
+                            <span class="select_city_title">{% trans 'Город' %}:</span>
+                            <select id="select_city" class="select_city" name="city">
+                                {% for city in cities %}
+                                {% if city.name in city_list %}
+                                <option class="select_city_check" value={{city}} selected>{{city}}
+                                </option>
+                                {% else %}
+                                <option class="select_city_check" value={{city}}>{{city}}
+                                </option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="stay_type_area eat_type_area filter_item_area">
+                            <span class="stay_type_title">{% trans 'Тип' %}: </span>
+                            <ul class="type_list">
+                                {% for type in types %}
+                                <li class="type_list_item">
+                                    <input type="checkbox" class="type_check type_check_2" name="type" value="{{type}}"
+                                           {% if type.name in type_list %} checked {% endif %}>
+                                    <span class="type_text">{{type}}</span>
+
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <span class="price_area filter_item_area">
+                                <span class="price_text">{% trans 'Цена' %}:</span>
+                                <input type="text"  name="MinPrice" class="input_price input_price_min"
+                                       {% if request.GET.MinPrice %} value="{{request.GET.MinPrice}}" {% endif %}>
+                                -
+                                <input type="text"  name="MaxPrice" class="input_price input_price_max"
+                                       {% if request.GET.MaxPrice %} value="{{request.GET.MaxPrice}}" {% endif %}>
+                            </span>
+
+                    </div>
+                            <button class="confirm_filter">{% trans 'Искать' %}</button>
+                </div>
+            </form>
+            <div class="region region-content">
+                <section id="block-system-main" class="block block-system clearfix">
+                    <div class="view view-gdepozhrat view-id-gdepozhrat view-display-id-page_1 view-dom-id-6d8e8231685fc92b22b9600a2da83f27">
+                        <div class="view-content dr_content">
+                            {% for eat in eats %}
+                            <div class="views-row views-row-{{eat.id}} views-row-odd views-row-first dr_content_item">
+                                <div class="views-field views-field-nothing">
+                                       <span class="field-content">
+                                        <div class="row">
+                                            <div class="col-md-4 col-xs-12 blo_imghei">
+                                                <img typeof="foaf:Image" class="img-responsive item_img" src="{{ eat.thumbnail.url }}" width="280" height="222"
+                                                    alt=""></div>
+                                            <div class="col-md-5 zg_block">
+                                                <a href="{% url 'type_eat' eat.type.slug %}" typeof="skos:Concept" property="rdfs:label skos:prefLabel">{{ eat.type }}</a>
+                                                <div class="zg_hotel"><a href="{% url 'eat_detail' eat.pk %}">{{ eat.title }}</a></div>
+                                                {% with eat.reviews.count as count %}
+                                                {% if count == 1 %}
+                                                <div class="kolvo">{{ eat.reviews.count }} {% trans 'отзыв' %}</div>
+                                                {% else %}
+                                                <div class="kolvo">{{ eat.reviews.count }} {% trans 'отзывов' %}</div>
+                                                {% endif %}
+                                                {% endwith %}
+                                                <p><img style="margin-top: -5px; margin-right: 5px;"
+                                                        src="{% static 'img/nakarte.png' %}">{% trans 'Посмотреть на карте' %}</p>
+                                            </div>
+                                            <div class="col-md-3 cena_block">
+                                                <div class="cena_hotel">
+                                                    <p>{% trans 'Средний чек' %}: <span>{{eat.price}}</span>тенге</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% include "includes/pagination.html" with page=eats %}
+                    </div>
+                </section>
+            </div>
+        </section>
+
+
+    </div>
+</div>
+</div>
+
+
+
+{% endblock %}

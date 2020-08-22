@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+    {% block content %}
+<div class="main-container container">
+
+                <header role="banner" id="page-header">
+
+                </header> <!-- /#page-header -->
+
+                <div class="row">
+
+
+                    <section class="col-sm-12">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{{comanda.title}}</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+
+
+                                <article id="node-273" class="node node-page clearfix" about="/kk/komanda-visit-aqmola" typeof="foaf:Document">
+                                    <header>
+                                        <span property="dc:title" content="Команда Visit Aqmola" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span> </header>
+                                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                                        <div class="field-items">
+                                            <div class="field-item even" property="content:encoded">
+                                                {{ comanda.content|safe }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-item form-type-item form-group"> <label class="control-label">Language</label>
+                                        KZ</div>-->
+                                    <footer>
+                                        <ul class="links list-inline">
+                                            <li class="translation_ru first"><a href="#" title="Команда Visit Aqmola" class="translation-link" xml:lang="ru">RU</a></li>
+                                            <li class="translation_en last"><a href="#" title="Command" class="translation-link" xml:lang="en">EN</a></li>
+                                        </ul>
+                                    </footer>
+                                </article>
+
+                            </section>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+
+{% endblock %}

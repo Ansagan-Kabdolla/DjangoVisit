@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load filters %}
+
+{% block body_taq %}
+class="html not-front not-logged-in no-sidebars page-events event i18n-kk"
+{% endblock %}
+
+
+    {% block content %}
+<div class="main-container container page-events">
+
+                <header role="banner" id="page-header" class="header_banner">
+
+                    <div class="region region-header">
+                        <section id="block-easy-breadcrumb-easy-breadcrumb easy-breadcrumb_black" class="block block-easy-breadcrumb clearfix">
+
+                            <div itemscope="" class="easy-breadcrumb">
+                                <span itemprop="title"><a href="../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front easy-breadcrumb_black">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Мероприятия' %}</span> </div>
+
+                        </section>
+                    </div>
+                </header>
+
+                <div class="row">
+                    <section class="col-sm-12">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{% trans 'Мероприятия' %}</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+                                <div class="view view-events view-id-events view-display-id-page_1 view-dom-id-d01f5e2ed505510a58c57788cfb56799 jquery-once-1-processed pag_page">
+                                    <div class="view-content content event_list">
+                                        {% for event in events %}
+                                    <div class="views-row content_item">
+                                        <div class="views-field views-field-nothing">
+                                            <span class="field-content">
+                                                <div class="event_page_b">
+                                                    <div class="imgtimer">
+                                                        <img typeof="foaf:Image" class="img-responsive event_img" src="{% if event.thumbnail %}{{event.thumbnail.url}}{% else %}{% static 'img/NoPhoto.jpg' %}{% endif %}" width="325" height="215" alt="">
+                                                    </div>
+                                                    <div class="event_zagol">
+                                                        <p>{{event.title}}</p>
+                                                    </div> <div class="timer">
+                                                    <p class="timer_text">{% trans 'Дата' %}</p>
+                                                    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-05-11T11:15:00+06:00">{{event.date|date:"d.m.Y" }}</span>
+                                                </div>
+                                                    <div class="event_mesto">{{event.address}}
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                        {% endfor %}
+                                </div>
+                                    <div class="pagination_area">{% include "includes/pagination.html" with page=events %}</div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+{% endblock %}

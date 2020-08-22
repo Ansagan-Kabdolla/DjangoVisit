@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block body_taq %}
+class="html front not-logged-in no-sidebars page-frontpag i18n-kk"
+{% endblock %}
+
+{% block swipe %}
+<div class="swipe_dots_wrap">
+    <div class="swipe_dots">
+        <div class="swipe_dots_item"><a href="#home" class="dot active_dots rmenu_dots_1" id="home_dots"></a></div>
+        <div class="swipe_dots_item"><a href="#block-block-22" class="dot rmenu_dots_2" id="block-block-22_dots"></a></div>
+        <div class="swipe_dots_item"><a href="#block-block-3" class="dot" id="block-block-3_dots"></a></div>
+        <div class="swipe_dots_item"><a href="#block-block-4" class="dot  rmenu_dots_4" id="block-block-4_dots"></a></div>
+        <div class="swipe_dots_item"><a href="#block-block-5" class="dot rmenu_dots_5" id="block-block-5_dots"></a></div>
+        <div class="swipe_dots_item"><a href="#block-block-6" class="dot rmenu_dots_6" id="block-block-6_dots"></a></div>
+        <div class="swipe_dots_item"><a href="#block-block-7" class="dot rmenu_dots_6" id="block-block-7_dots"></a></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block from_header %}
+
+                <div class="region region-hed">
+                    <section id="block-block-1" class="block block-block front_home clearfix">
+
+
+                        <h1 class="home_title">{% blocktrans %} Туристский информационный центр
+                            <span>Акмолинской области</span> {% endblocktrans %} </h1>
+                        <img class="img-responsive" src="{% static 'img/visitakmola.png' %}">
+                        <div class="dobro">{% trans 'Добро пожаловать!' %}</div>
+                    </section>
+                </div>
+                {% endblock %}
+
+
+{% block content %}
+            <div class="region region-widthcon block_area" id="block-block-22">
+                <section id="block-block-2" class="block block-block front_akmola clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 block_text block_text_bottom block_text_2">
+                                <h2 class="frontvzagol block_text_title">
+                                    {% trans 'Начните свое путешествие в Акмолинскую область вместе с нами' %}</h2>
+                                <a class="btn blubut" href="{% url 'akmola' %}">{% trans 'ПОЗНАКОМИТЬСЯ С ОБЛАСТЬЮ ПОБЛИЖЕ' %}</a>
+                            </div>
+                            <div class="col-md-6 block_cards">
+                                <section id="block-views-akmola-block--2" class="block block-views clearfix">
+
+
+                                    <div class="view view-akmola view-id-akmola view-display-id-block view-dom-id-b5f8d1d3ad048ef510bbbb62b01af876">
+
+
+
+                                        <div class="view-content">
+                                            <div class="views-row views-row-1 views-row-odd views-row-first block_card block_card_degLeft">
+
+                                                <div class="views-field views-field-nothing"> <span class="field-content">
+                                                        <div class="akmo"><a href="./tmp/nature.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/priroda.jpg' %}" width="416" height="227" alt="">
+                                                                <p class="event_title">{% trans 'Природа' %}</p>
+                                                            </a></div>
+                                                    </span> </div>
+                                            </div>
+                                            <div class="views-row views-row-2 views-row-even block_card block_card_degLeft">
+
+                                                <div class="views-field views-field-nothing"> <span class="field-content">
+                                                        <div class="akmo"><a href="./tmp/geo.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/geografiya.jpg' %}" width="416" height="227" alt="">
+                                                                <p class="event_title">{% trans 'География' %}</p>
+                                                            </a></div>
+                                                    </span> </div>
+                                            </div>
+                                            <div class="views-row views-row-3 views-row-odd views-row-last block_card block_card_degLeft">
+
+                                                <div class="views-field views-field-nothing"> <span class="field-content">
+                                                        <div class="akmo"><a href="./tmp/history.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/borovoe.jpg' %}" width="416" height="227" alt="">
+                                                                <p class="event_title">{% trans 'История' %}</p>
+                                                            </a></div>
+                                                    </span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section id="block-block-3" class="block block-block front_marshrut block_area clearfix">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 block_text block_text_top block_text_white">
+                            <h2 class="frontvzagol block_text_title">{% trans 'Выберите один из тысячи маршрутов' %}</h2>
+                            <a class="btn blubut" href="./tmp/ways.html">{% trans 'Посмотреть все маршруты' %} </a>
+                        </div>
+                        <div class="col-md-6 block_cards">
+                            <section id="block-views-marshrutru-block--2" class="block block-views clearfix">
+
+
+                                <div class="view view-marshrutru view-id-marshrutru view-display-id-block view-dom-id-70cc0b5035eaf327348e5da6a858d150">
+                                    <div class="view-content">
+                                        <div class="views-row views-row-1 views-row-odd views-row-first block_card block_card_degRight">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/burabay_wonderful.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/tours_the_magical_world_of_burabay.png' %}" width="416" height="227" alt="">
+                                                            <p class="event_title">{% trans 'Жемчужина Казахстана - Бурабай' %}</p>
+                                                        </a></div>
+                                                </span> </div>
+                                        </div>
+                                        <div class="views-row views-row-2 views-row-even block_card block_card_degRight">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/nature_guest.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/tours_a_visit_to_nature.png' %}" width="416" height="227" alt="">
+                                                            <p class="event_title">{% trans 'В гости к природе' %}</p>
+                                                        </a></div>
+                                                </span> </div>
+                                        </div>
+                                        <div class="views-row views-row-3 views-row-odd views-row-last block_card block_card_degRight">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/burabay.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/burabay.jpg' %}" width="416" height="227" alt="">
+                                                            <p class="event_title">{% trans 'Волшебный мир Бурабая' %}</p>
+                                                        </a></div>
+                                                </span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="block-block-4" class="block block-block front_hotel block_area clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 block_text">
+                            <h2 class="frontvzagol block_text_title">{% trans 'Выберите подходящий отель' %}</h2>
+                            <a class="btn blubut" href="./tmp/stay.html">{% trans 'Смотреть все отели' %}</a>
+                        </div>
+                        <div class="col-md-6 block_cards">
+                            <section id="block-views-wheretostay-block--2" class="block block-views clearfix">
+                                <div class="view view-wheretostay view-id-wheretostay view-display-id-block view-dom-id-46f75f380413b537d4b023e14954e97f jquery-once-1-processed">
+
+                                    <div class="view-content">
+                                        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last block_card block_card_degLeft">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/rixos.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/burabay_0.jpg' %}" width="416" height="227" alt="">
+                                                            <p class="event_title">Rixos Borovoe</p>
+                                                        </a></div>
+                                                </span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="block-block-5" class="block block-block front_restoran block_area clearfix">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 block_text">
+                            <h2 class="frontvzagol block_text_title">
+                                {% trans 'Попробуйте местную кухню' %}</h2>
+                            <a class="btn blubut" href="./tmp/restaraunt.html">{% trans 'Посмотреть все заведения' %}</a>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="block-block-6" class="block block-block front_event block_area clearfix">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 block_text">
+                            <h2 class="frontvzagol block_text_title">{% trans 'Посетите культурные и развлекательные мероприятия' %}</h2>
+                            <a class="btn blubut" href="./tmp/event.html">{% trans 'СМОТРЕТЬ АФИШУ' %}</a>
+                        </div>
+                        <div class="col-md-6 block_cards">
+                            <section id="block-views-events-block--2" class="block block-views clearfix">
+
+                                <div class="view view-events view-id-events view-display-id-block view-dom-id-bd92bd68b4f2a480fd549fe279399a25 jquery-once-1-processed">
+                                    <div class="view-content">
+                                        <div class="views-row views-row-1 views-row-odd views-row-first block_card">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/santa_fest_kz.html">
+                                                            <div class="imgtimer index_imgtimer"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/santa-fest-header-1024x576.jpg' %}" width="230" height="210" alt=""></div>
+                                                            <div class="event_text">
+                                                                <p class="event_title">SANTA FEST</p>
+                                                                <div class="timer">
+                                                                    <p>Күні</p><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-12-16T11:15:00+06:00">16.12.2019</span>
+                                                                </div>
+                                                            </div>
+                                                        </a></div>
+
+
+                                                </span> </div>
+                                        </div>
+                                        <div class="views-row views-row-2 views-row-even block_card">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/kansonar.html">
+                                                            <div class="imgtimer index_imgtimer"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/risunok1.jpg' %}" width="230" height="210" alt=""></div>
+                                                            <div class="event_text">
+                                                                <p class="event_title">МЕЖДУНАРОДНЫЙ ТУРНИР «КАНСОНАР»</p>
+                                                                <div class="timer">
+                                                                    <p>Күні</p><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-12-06T11:15:00+06:00">06.12.2019</span>
+                                                                </div>
+                                                            </div>
+                                                        </a></div>
+
+
+                                                </span> </div>
+                                        </div>
+                                        <div class="views-row views-row-3 views-row-odd views-row-last block_card">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="akmo"><a href="./tmp/santa_guest_kz.html">
+                                                            <div class="imgtimer index_imgtimer"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/kl_1.jpg' %}" width="230" height="210" alt=""></div>
+                                                            <div class="event_text">
+                                                                <p class="event_title">РЕЗИДЕНЦИЯ САНТЫ</p>
+                                                                <div class="timer">
+                                                                    <p>Күні</p><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-12-01T11:15:00+06:00">01.12.2019</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="block-block-7" class="block block-block front_turimz block_area clearfix">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 block_text">
+                            <h2 class="frontvzagol block_text_title">{% trans 'Памятка туристу поможем провести запоминающийся отдых' %}</h2>
+                            <a class="btn blubut" href="./tmp/tourist.html">{% trans 'Полная инструкция' %}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <section id="block-views-touristfor-block--2" class="block block-views clearfix">
+
+
+                                <div class="view view-touristfor view-id-touristfor view-display-id-block view-dom-id-8496996ebc1b9adfe48b9b7e857203ce">
+                                    <div class="view-content">
+                                        <div class="views-row views-row-1 views-row-odd views-row-first block_card">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="bturistu"><a href="./tmp/tilashar.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/tourist_language.png' %}" width="185" height="185" alt="">
+                                                            <p>{% trans 'Разговорник' %}</p>
+                                                        </a></div>
+                                                </span> </div>
+                                        </div>
+                                        <div class="views-row views-row-2 views-row-even block_card">
+
+                                            <div class="views-field views-field-nothing"> <span class="field-content">
+                                                    <div class="bturistu"><a href="./tmp/safe_kz.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/tourist_rules.png' %}" width="185" height="185" alt="">
+                                                            <p>{% trans 'Правила безопасности' %}</p>
+                                                        </a></div>
+                                                </span> </div>
+                                        </div>
+                                        <div class="views-row views-row-3 views-row-odd views-row-last block_card">
+                                            <div class="views-field views-field-nothing">
+                                                <span class="field-content">
+                                                    <div class="bturistu">
+                                                        <a href="./tmp/kolik.html"><img typeof="foaf:Image" class="img-responsive" src="{% static 'img/tourist_transport.png' %}" width="185" height="185" alt="">
+                                                            <p>{% trans 'Транспорт' %}</p>
+                                                        </a>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+{% endblock %}

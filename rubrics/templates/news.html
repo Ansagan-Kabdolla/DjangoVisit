@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load filters %}
+
+{% block body_taq %}
+class="html not-front not-logged-in no-sidebars page-news i18n-kk"
+{% endblock %}
+
+    {% block content %}
+
+        <div class="main-container container page-news">
+
+            <header role="banner" id="page-header">
+
+                <div class="region region-header">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+                        <div itemscope="" class="easy-breadcrumb">
+                            <span itemprop="title"><a href="{% url 'index' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span>
+                            <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Новости' %}</span>
+                        </div>
+                    </section>
+                </div>
+            </header> <!-- /#page-header -->
+
+            <div class="row">
+                <section class="col-sm-12">
+                    <a id="main-content"></a>
+                    <h1 class="page-header news_page-header">{% trans 'Новости' %}</h1>
+                    <div class="region region-content">
+                        <section id="block-system-main" class="block block-system clearfix">
+                            <div class="main_news">
+                                <div class="col-md-12">
+                                    <div class="news_text col-md-5">
+                                        <a href="{{last_news.get_absolute_url}}" class="news_item_link">
+                                            <h2 class="news_title_main">
+                                                {{last_news.title}}
+                                            </h2>
+                                            </a>
+                                            <p class="news_text_desc">{{last_news.content|safe}}</p>
+                                            <p class="news_date">{{last_news.date}}</p>
+                                            <!--<div class="form-item form-type-item form-group"><label
+                                                    class="control-label">Language </label>KZ
+                                            </div>-->
+                                    </div>
+                                    <div class="news_imgArea col-md-7">
+                                        <img src="{{last_news.thumbnail.url}}" alt="NEWS" class="news_img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news_list_area">
+                                <ul class="news_list">
+                                    {% for n in news %}
+                                    <li class="news_list_item">
+                                        <div>
+                                            <img src="{{ n.thumbnail.url }}" alt="PHOTO" class="news_list_img">
+                                            <a href="{{n.get_absolute_url}}" class="news_item_link"><h5 class="news_title">{{n.title}}</h5>
+                                            </a>
+                                        </div>
+                                        <span class="news_date">{{n.date}}</span>
+                                    </li>
+
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    {% endblock %}

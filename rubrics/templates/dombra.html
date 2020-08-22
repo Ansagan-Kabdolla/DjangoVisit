@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Домбра Кокшетау | ТУРИСТСКИЙ ИНФОРМАЦИОННЫЙ ЦЕНТР АКМОЛИНСКОЙ ОБЛАСТИ |</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.css" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.css" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/less/scaffolding.less" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/less/input-groups.less" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/less/navs.less" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/less/dropdowns.less" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/less/navbar.less" media="all">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/less/pager.less" media="all">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../libs/slick.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/slick.js"></script>
+    <script src="https://kit.fontawesome.com/003b636a5f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<1a554514-f1db-44dc-a2f5-a00ae4bf7a91>&lang=ru_RU" type="text/javascript">
+    </script>
+</head>
+
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-132 node-type-wheretogo i18n-kk">
+    <div class="wrapper">
+        <div class="site_content">
+            <div class="home block_area" id="home">
+                <header id="navbar" role="banner" class="header navbar navbar-default">
+                    <div class="container home_container">
+                        <div class="navbar-header">
+                            <a class="logo navbar-btn pull-left" href="../index.html" title="Басты">
+                                <img src="../img/Logo.png" alt="Басты">
+                            </a>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse" id="navbar-collapse">
+                            <nav role="navigation" class="navigation">
+                                <ul class="menu nav navbar-nav">
+                                    <li class="menu_item first leaf"><a href="../tmp/aqmola.html" title="" class="menu_item_link">Ақмола</a></li>
+                                    <li class="menu_item leaf"><a href="../tmp/ways.html" class="menu_item_link">Маршруттар</a></li>
+                                    <li class="menu_item leaf"><a href="../tmp/stay.html" title="" class="menu_item_link">Орналасу</a></li>
+                                    <li class="menu_item leaf"><a href="../tmp/restaraunt.html" title="" class="menu_item_link">Тамақтану
+                                        </a></li>
+                                    <li class="menu_item menu_item leaf"><a href="../tmp/where.html" title="" class="menu_item_link active_link">Қайда баруға болады</a></li>
+                                    <li class="menu_item leaf"><a href="../tmp/event.html" title="" class="menu_item_link">Іс шаралар</a></li>
+                                    <li class="menu_item leaf"><a href="../tmp/tourist.html" title="" class="menu_item_link">Туристке</a></li>
+                                    <li class="menu_item leaf"><a href="../tmp/news.html" title="" class="menu_item_link">Жаңалықтар</a></li>
+                                    <li class="menu_item last expanded dropdown"><a href="http://example.com/" title="" class="dropdown-toggle" data-toggle="dropdown">Тағы
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="first leaf"><a href="#" title="">Visit Aqmola командасы</a></li>
+                                            <li class="last leaf"><a href="#" title="">Фотогалерея</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <section id="block-locale-language" class="block block-locale clearfix">
+                                        <ul class="language-switcher-locale-url">
+                                            <li class="en first"><a href="#" class="language-link" xml:lang="en">EN</a></li>
+                                            <li class="kk active"><a href="#" class="language-link active" xml:lang="kk">KZ</a></li>
+                                            <li class="ru last"><a href="#" class="language-link" xml:lang="ru">RU</a></li>
+                                        </ul>
+                                    </section>
+                                    <section id="block-search-form" class="block block-search clearfix">
+                                        <form class="form-search content-search" action="#" method="post" id="search-block-form" accept-charset="UTF-8">
+                                            <div>
+                                                <div>
+                                                    <h2 class="element-invisible">Search form</h2>
+                                                    <div class="input-group"><input title="Enter the terms you wish to search for." placeholder="Search" class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128"><span class="input-group-btn"><button type="submit" class="btn btn-primary"><i class="fas fa-search"></i>
+                                                            </button></span></div>
+                                                    <div class="form-actions form-wrapper form-group" id="edit-actions"><button class="element-invisible btn btn-primary form-submit" type="submit" id="edit-submit" name="op" value="Search">Search</button>
+                                                    </div><input type="hidden" name="form_build_id" value="form-Wyz5zvISkYcSoV82uCnFQrWfyrxmZK5w6WVJjueFP8U">
+                                                    <input type="hidden" name="form_id" value="search_block_form">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+
+            </div>
+
+            <div class="region region-widthcon">
+                <section id="block-block-13" class="block block-block clearfix">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 krohi">
+                                <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+
+
+                                    <div itemscope="" class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb">
+                                        <span itemprop="title"><a href="../index.html">Главная</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                        <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Куда сходить</span> </div>
+
+                                </section>
+                            </div>
+                            <div class="col-md-3 pamyat_t">
+                                <p>КУДА СХОДИТЬ<br>
+                                    Проведите время с пользой и удовольствием!</p>
+                            </div>
+
+                            <div class="col-md-9">
+                                <div class="oteltopkat">
+                                    <p><span>7</span>музеев</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>32</span>памятников</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>16</span>достопримичательностей</p>
+                                </div>
+                                <div class="oteltopkat">
+                                    <p><span>1</span>заповедник</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <div class="main-container container">
+
+                <header role="banner" id="page-header">
+
+                </header> <!-- /#page-header -->
+
+                <div class="row">
+
+
+                    <section class="col-sm-12">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">АЛЛЕЯ ГЕРОЕВ СОВЕТСКОГО СОЮЗА</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+                                <article id="node-132" class="node node-wheretogo clearfix" about="/ru/where-to-go/alleya-geroev-sovetskogo-soyuza" typeof="sioc:Item foaf:Document">
+                                    <header>
+                                        <span property="dc:title" content="АЛЛЕЯ ГЕРОЕВ СОВЕТСКОГО СОЮЗА" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span> </header>
+                                    <div class="group-row field-group-div row podfothot">
+                                        <div class="group-md8 field-group-div col-md-8">
+                                            <div class="field field-name-field-gallery field-type-image field-label-hidden">
+                                                <div class="field-items">
+                                                    <div class="field-item even">
+                                                    <div class="slider">
+                                                            <div class="slider__item filter">
+                                                                <img src="../img/whatsapp-image-2019-09-16-at-09.16.18_0.jpeg" alt="Фото">
+                                                            </div>
+                                                            <div class="slider__item filter">
+                                                                <img src="../img/whatsapp-image-2019-09-16-at-09.16.17.jpeg" alt="Фото">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="group-md4 field-group-div  col-md-4">
+                                            <div class="field field-name-field-adres field-type-text field-label-above">
+                                                <div class="field-label">Адрес:&nbsp;</div>
+                                                <div class="field-items">
+                                                    <div class="field-item even">Ауезова - Биржан Сала</div>
+                                                </div>
+                                            </div>
+                                            <div class="field field-name-field-map field-type-text field-label-above">
+
+                                                <div id="first_map" style=" height:300px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </section>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="region region-footer">
+                    <section id="block-block-9" class="block block-block clearfix">
+
+                        <div class="row footer_first">
+                            <div class="col-md-5">
+                                <div class="footcos">
+                                    <img src="../img/vlf.png">
+                                    <div class="footcos2">
+                                        <a href="https://vk.com/public185677668">
+
+                                            <i class="fab fa-vk"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UCmVzmTwxP-_CbfbS2GmSJcA?view_as=subscriber">
+
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/visitaqmola.kz/">
+
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/visitaqmola.kz/">
+
+                                            <i class="fab fa-facebook"></i>
+                                        </a><a href="https://www.visitaqmola.kz/">
+
+                                            <i class="fab fa-twitter"></i>
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <p>Ақмола облысы туристік бизнесті дамыту үшін өте қолайлы аймақты алып жатыр.
+                                    Ішкі туризмді дамытуға үлкен мүмкіндіктер облыстың көптеген аудандарында бар. Демалу үйлері, курорттар, туристік орталықтар, диспансерлер, пансионаттар және т.б. дамыған желі бар.
+                                    Щучинск-Боровск курорттық аймағы керемет табиғи-климаттық жағдайлары, бай емдеу-сауықтыру ресурстары және тарихи-мәдени қоры, республиканың орталығында қолайлы географиялық орналасуы және Қазақстан Республикасының астанасы Астанаға жақын орналасқан курорттық орын. Болашақта ол Еуразияның қазіргі заманғы ірі туристік орталығы болуға уәде береді. </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 footcontact">
+                                <div class="footcontact_content">
+                                    <p>Көкшетау қ., Акан Серэ 116А</p>
+                                    <p class="yablolink">+7 (708) 801 00 00</p>
+                                    <p class="yablolink">+7 (7162) 91 18 16</p>
+                                    <p>info@visitaqmola.kz</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/script.js"> </script>
+    <script>
+
+        ymaps.ready(function() {
+            // Указывается идентификатор HTML-элемента.
+            var my_map = new ymaps.Map("first_map", {
+                    center: [53.286398, 69.379499],
+                    zoom: 16
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                myGeoObject = new ymaps.GeoObject({
+                    // Описание геометрии.
+                    geometry: {
+                        type: "Point",
+                        coordinates: [55.8, 37.8]
+                    },
+                    // Свойства.
+                    properties: {
+                        // Контент метки.
+                        iconContent: 'Я тащусь',
+                        hintContent: 'Ну давай уже тащи'
+                    }
+                }, {
+                    // Опции.
+                    // Иконка метки будет растягиваться под размер ее содержимого.
+                    preset: 'islands#blackStretchyIcon',
+                    // Метку можно перемещать.
+                    draggable: true
+                }),
+                myPieChart = new ymaps.Placemark([
+                    55.847, 37.6
+                ], {
+                    // Данные для построения диаграммы.
+                    data: [{
+                            weight: 8,
+                            color: '#0E4779'
+                        },
+                        {
+                            weight: 6,
+                            color: '#1E98FF'
+                        },
+                        {
+                            weight: 4,
+                            color: '#82CDFF'
+                        }
+                    ],
+                    iconCaption: "Диаграмма"
+                }, {
+                    // Зададим произвольный макет метки.
+                    iconLayout: 'default#pieChart',
+                    // Радиус диаграммы в пикселях.
+                    iconPieChartRadius: 30,
+                    // Радиус центральной части макета.
+                    iconPieChartCoreRadius: 10,
+                    // Стиль заливки центральной части.
+                    iconPieChartCoreFillStyle: '#ffffff',
+                    // Cтиль линий-разделителей секторов и внешней обводки диаграммы.
+                    iconPieChartStrokeStyle: '#ffffff',
+                    // Ширина линий-разделителей секторов и внешней обводки диаграммы.
+                    iconPieChartStrokeWidth: 3,
+                    // Максимальная ширина подписи метки.
+                    iconPieChartCaptionMaxWidth: 200
+                });
+
+            my_map.geoObjects
+                .add(myGeoObject)
+                .add(myPieChart)
+                .add(new ymaps.Placemark([53.286398, 69.379499], {
+                    balloonContent: '<strong>серобуромалиновый</strong> цвет'
+                }, {
+                    preset: 'islands#dotIcon',
+                    iconColor: '#735184'
+                }));
+
+        });
+
+    </script>
+</body>
+
+</html>

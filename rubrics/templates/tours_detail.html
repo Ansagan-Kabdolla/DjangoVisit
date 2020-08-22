@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body_taq %}
+class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-4 node-type-marshrut i18n-kk"
+{% endblock %}
+    {% block content %}
+<div class="main-container container page-tours">
+
+            <header role="banner" id="page-header">
+
+                <div class="region region-header">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+                        <div itemscope="" class="easy-breadcrumb easy-breadcrumb_black">
+                            <span itemprop="title"><a href="{% url 'index' %}">Главная</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title"><a href="{% url 'tours' %}">Маршруты</a> </span><span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{{tour.title}}</span>
+                        </div>
+
+                    </section>
+                </div>
+            </header> <!-- /#page-header -->
+
+            <div class="row">
+
+                <aside class="col-sm-3" role="complementary">
+                    <div class="region region-sidebar-first well">
+                        <section id="block-views-marshrutru-block-1" class="block block-views clearfix">
+                            <div class="view view-marshrutru view-id-marshrutru view-display-id-block_1 view-dom-id-0a3df24231ecb3a937b0133f83f05f1d">
+                                <div class="view-content">
+                                    {% for tour in tours %}
+                                    <div class="views-row views-row-1 views-row-odd views-row-first">
+                                        <div class="views-field views-field-title"><span class="field-content"><a href="{{ tour.get_absolute_url }}" class="active">{{tour.title}}</a></span></div>
+                                    </div>
+                                    {% endfor %}
+                                   <!-- <span class="more_ways_span"><img src="https://dikushan00.github.io/libs/next.svg" class="more_ways_btn" style="transform: rotate(90deg); width: 25px; position: absolute; left: 50%; margin-left: -13px; cursor: pointer;" alt="PHOTO"></span>-->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+                <section class="col-sm-9">
+                        <a id="main-content"></a>
+                        <h1 class="page-header">{{tour.title}}</h1>
+                        <div class="region region-content">
+                            <section id="block-system-main" class="block block-system clearfix">
+
+
+                                <article id="node-58" class="node node-marshrut clearfix" about="/ru/tours/lechebnye-gryazi" typeof="sioc:Item foaf:Document">
+                                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                                        <div class="field-items">
+                                            <div class="field-item even" property="content:encoded">
+
+
+                                                        <div class="tours-maincontent_text">
+                                                            {{tour.content|safe}}
+                                                        </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </section>
+                        </div>
+                    </section>
+            </div>
+</div>
+{% endblock %}

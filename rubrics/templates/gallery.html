@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load filters %}
+
+
+{% block body_taq %}
+class="html not-front not-logged-in no-sidebars page-foto foto i18n-kk"
+{% endblock %}
+
+{% block content %}
+    <div class="main-container container">
+
+            <header role="banner" id="page-header">
+                <div class="region region-header">
+                    <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
+                        <div itemscope="" class="easy-breadcrumb">
+                            <span itemprop="title"><a href="../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span>
+                            <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{% trans 'Фото' %}</span></div>
+                    </section>
+                </div>
+            </header>
+
+            <div class="row">
+                <section class="col-sm-12 pag_page">
+                    <h1 class="page-header">{% trans 'Фото' %}</h1>
+                    <div class="foto_content">
+                        <div class="foto_slider_wrap">
+                            <div class="foto_slider slick-initialized slick-slider slick-dotted"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/burabay.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/burabay_0.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/home.png" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/home.png" alt="">-->
+<!--                                </div>-->
+                            <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 8289px; transform: translate3d(-921px, 0px, 0px);"><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/event_championship_snowboarding.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/event_qansonar.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/event_sakskie_bani.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" style="width: 307px;"><img src="{% static 'img/burabay.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 307px;"><img src="{% static 'img/burabay_0.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02" style="width: 307px;"><img src="{% static 'img/home.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide03" aria-describedby="slick-slide-control03" style="width: 307px;"><img src="{% static 'img/burabay.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide04" aria-describedby="slick-slide-control04" style="width: 307px;"><img src="{% static 'img/063_2476-min.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide05" aria-describedby="slick-slide-control05" style="width: 307px;"><img src="{% static 'img/58970496-cd6b-4b64-8e76-5fba90fa8411.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide06" aria-describedby="slick-slide-control06" style="width: 307px;"><img src="{% static 'img/040581291.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide07" aria-describedby="slick-slide-control07" style="width: 307px;"><img src="{% static 'img/de6e8e5e-fca4-4c48-9672-86a4aa2d1c3d.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide08" aria-describedby="slick-slide-control08" style="width: 307px;"><img src="{% static 'img/e89f4ac1bd143df0c2e00eb6ae219c71.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide09" aria-describedby="slick-slide-control09" style="width: 307px;"><img src="{% static 'img/event_championship_snowboarding.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="10" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide010" aria-describedby="slick-slide-control010" style="width: 307px;"><img src="{% static 'img/event_qansonar.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide" data-slick-index="11" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide011" aria-describedby="slick-slide-control011" style="width: 307px;"><img src="{% static 'img/event_sakskie_bani.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/burabay.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/burabay_0.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/home.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="15" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/burabay.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="16" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/063_2476-min.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="17" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/58970496-cd6b-4b64-8e76-5fba90fa8411.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="18" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/040581291.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="19" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/de6e8e5e-fca4-4c48-9672-86a4aa2d1c3d.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="20" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/e89f4ac1bd143df0c2e00eb6ae219c71.jpg' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="21" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/event_championship_snowboarding.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="22" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/event_qansonar.png' %}" alt="Photo"></div><div class="foto_slider_item slick-slide slick-cloned" data-slick-index="23" aria-hidden="true" tabindex="-1" style="width: 307px;"><img src="{% static 'img/event_sakskie_bani.png' %}" alt="Photo"></div></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button><ul class="slick-dots" style="" role="tablist"><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 4" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 4" tabindex="-1">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 4" tabindex="-1">3</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control03" aria-controls="slick-slide03" aria-label="4 of 4" tabindex="-1">4</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control04" aria-controls="slick-slide04" aria-label="5 of 4" tabindex="-1">5</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control05" aria-controls="slick-slide05" aria-label="6 of 4" tabindex="-1">6</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control06" aria-controls="slick-slide06" aria-label="7 of 4" tabindex="-1">7</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control07" aria-controls="slick-slide07" aria-label="8 of 4" tabindex="-1">8</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control08" aria-controls="slick-slide08" aria-label="9 of 4" tabindex="-1">9</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control09" aria-controls="slick-slide09" aria-label="10 of 4" tabindex="-1">10</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control010" aria-controls="slick-slide010" aria-label="11 of 4" tabindex="-1">11</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control011" aria-controls="slick-slide011" aria-label="12 of 4" tabindex="-1">12</button></li></ul></div>
+                        </div>
+                        <div class="foto_list">
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/burabay.jpg" class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/burabay_0.jpg"  class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/home.png" class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/seven_fon.png" class="minimized" alt="">-->
+<!--                            </div>-->
+                        <div class="foto_list_item"><img class="minimized" src="{% static 'img/burabay.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/burabay_0.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/home.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/burabay.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/063_2476-min.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/58970496-cd6b-4b64-8e76-5fba90fa8411.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/040581291.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/de6e8e5e-fca4-4c48-9672-86a4aa2d1c3d.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/e89f4ac1bd143df0c2e00eb6ae219c71.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/event_championship_snowboarding.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/event_qansonar.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/event_sakskie_bani.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/event_rock_climbing_championship_juniors.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/events_halfmarathon.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/F8A38A5C-7898-483A-A213-C3F16E7BC4C3.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/gefyQBwjVCQ.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/JaRKO-KROSS.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/mvsl0206.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/Parusnaja-regata.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/photo5379865748979165773.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/photo_251805.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/regata.jpg' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/tourist_burabay.png' %}" alt="photo"></div><div class="foto_list_item"><img class="minimized" src="{% static 'img/tours_burabay_pearl_of_kazakhstan.png' %}" alt="photo"></div></div>
+                    </div>
+                        <div class="foto_list">
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/burabay.jpg" class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/burabay_0.jpg"  class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/home.png" class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/seven_fon.png" class="minimized" alt="">-->
+<!--                            </div>-->
+
+                            {% for photo in photos %}
+                            <div class="foto_list_item">
+                                <img class="minimized" src="{{photo.images.url}}" alt="photo">
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <nav aria-label="Page navigation example pagination_nav">
+                        <div class="pagination_area">
+                            <div class="page_prev disabled">
+                                <a class="page-link page_link_prev" href="" tabindex="-1">Пред.</a>
+                            </div>
+                            <ul class="pagination justify-content-center">
+                            <li class="page-item page-item_1 active"><a class="page-link page_number">1</a></li><li class="page-item page-item_2"><a class="page-link page_number">2</a></li></ul>
+                            <div class="page_next">
+                                <a class="page-link page_link_next more_card_event" href="">След.</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                </section>
+            </div>
+        </div>
+{% endblock %}
