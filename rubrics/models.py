@@ -77,6 +77,7 @@ class Eat(models.Model):
     vk = models.CharField(max_length=50,null=True,blank=True,verbose_name='Вконтакте')
     latitude = models.DecimalField(max_digits=19,decimal_places=15,verbose_name='Ширина')
     longitude = models.DecimalField(max_digits=19,decimal_places=15,verbose_name='Долгота')
+    slug = models.SlugField(max_length=70, unique=True, blank=True, null=True)
     objects = ArticleManager()
     def get_absolute_url(self):
         return reverse('eat_detail', args=[str(self.id)])
@@ -102,7 +103,7 @@ class Go(models.Model):
     thumbnail = models.FileField(upload_to='thumbnail/', verbose_name='Главное фото')
     address = models.CharField(max_length=100, verbose_name='Адрес')
     phone = models.CharField(max_length=100,null=True,blank=True, verbose_name='Телефон')
-
+    slug = models.SlugField(max_length=70, unique=True, blank=True, null=True)
     objects = ArticleManager()
     def get_absolute_url(self):
         return reverse('go_detail', args=[str(self.id)])
@@ -141,7 +142,7 @@ class Stay(models.Model):
     longitude = models.DecimalField(max_digits=19, decimal_places=15, verbose_name='Долгота')
     isActive = models.BooleanField(default=True,verbose_name='Активно')
     isTop = models.BooleanField(default=False,verbose_name='Топ')
-
+    slug = models.SlugField(max_length=70, unique=True, blank=True, null=True)
     objects = ArticleManager()
     def get_absolute_url(self):
         return reverse('stay_detail', args=[str(self.id)])
