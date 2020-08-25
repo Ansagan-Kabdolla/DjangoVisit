@@ -125,6 +125,7 @@ class AkmolaAdmin(admin.ModelAdmin):
 class EatAdmin(admin.ModelAdmin):
     list_display = ('title','city','type','price','phone','get_image')
     list_filter = ('city','type','price')
+    prepopulated_fields = {'slug':('title',)}
     inlines = [EatInline,EatReviewsInline]
 
     def get_image(self,obj):
@@ -166,7 +167,8 @@ class GoAdmin(admin.ModelAdmin):
     list_display = ('title','city','type','phone','get_image')
     list_filter = ('city','type')
     inlines = [GoInline]
-
+    prepopulated_fields = {'slug':('title',)}
+    
     def get_image(self,obj):
         return mark_safe(f'<img src={obj.thumbnail.url} width="60" height="60" ')
     get_image.short_description = "Photo"
@@ -176,7 +178,9 @@ class StayAdmin(admin.ModelAdmin):
     list_display = ('title','city','type','price','phone','get_image','isTop')
     list_editable = ('isTop',)
     list_filter = ('city','type','price','stars')
+    prepopulated_fields = {'slug':('title',)}
     inlines = [StayInline,StayReviewsInline]
+    
     def get_image(self,obj):
         return mark_safe(f'<img src={obj.thumbnail.url} width="60" height="60" ')
     get_image.short_description = "Photo"
