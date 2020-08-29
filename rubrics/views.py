@@ -578,20 +578,20 @@ def type_stay(request,slug):
     n = paginator.num_pages
     n = range(1, 1 + n)
     if request.LANGUAGE_CODE == 'ru':
-        stay_count_otel = stays.filter(type__name='Отель').count()
-        stay_count_sanat = stays.filter(type__name='Санаторий').count()
-        stay_count_gostdom = stays.filter(type__name='Гостевые дома').count()
-        stay_count_zona = stays.filter(type__name='Зона отдыха').count()
+        stay_count_otel = stay_list.filter(type__name='Отель').count()
+        stay_count_sanat = stay_list.filter(type__name='Санаторий').count()
+        stay_count_gostdom = stay_list.filter(type__name='Гостевые дома').count()
+        stay_count_zona = stay_list.filter(type__name='Зона отдыха').count()
     elif request.LANGUAGE_CODE == 'en':
-        stay_count_otel = stays.filter(type__name='Hotel').count()
-        stay_count_sanat = stays.filter(type__name='Sanatorium').count()
-        stay_count_gostdom = stays.filter(type__name='Guest house').count()
-        stay_count_zona = stays.filter(type__name='Recreation area').count()
+        stay_count_otel = stay_list.filter(type__name='Hotel').count()
+        stay_count_sanat = stay_list.filter(type__name='Sanatorium').count()
+        stay_count_gostdom = stay_list.filter(type__name='Guest house').count()
+        stay_count_zona = stay_list.filter(type__name='Recreation area').count()
     else:
-        stay_count_otel = stays.filter(type__name='Қонақ үй').count()
-        stay_count_sanat = stays.filter(type__name='Шипажай').count()
-        stay_count_gostdom = stays.filter(type__name='Қонақ үйлер').count()
-        stay_count_zona = stays.filter(type__name='Демалыс аймағы').count()
+        stay_count_otel = stay_list.filter(type__name='Қонақ үй').count()
+        stay_count_sanat = stay_list.filter(type__name='Шипажай').count()
+        stay_count_gostdom = stay_list.filter(type__name='Қонақ үйлер').count()
+        stay_count_zona = stay_list.filter(type__name='Демалыс аймағы').count()
     context = {'stays':stays,'n':n,'stay_count_otel':stay_count_otel,'type':types,'hotels':hotels,
                'stay_count_sanat':stay_count_sanat,'stay_count_gostdom':stay_count_gostdom,'hotels':hotels,
                'stay_count_zona':stay_count_zona,
