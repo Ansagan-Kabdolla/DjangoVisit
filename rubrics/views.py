@@ -443,7 +443,7 @@ def filtering_stay(request):
         stays_page = paginator.page(paginator.num_pages)
     n = paginator.num_pages
     n = range(1, 1 + n)
-if request.LANGUAGE_CODE == 'ru':
+    if request.LANGUAGE_CODE == 'ru':
         stay_count_otel = stays.filter(type__name='Отель').count()
         stay_count_sanat = stays.filter(type__name='Санаторий').count()
         stay_count_gostdom = stays.filter(type__name='Гостевые дома').count()
