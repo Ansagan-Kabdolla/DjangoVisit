@@ -116,9 +116,9 @@ class="html not-front not-logged-in one-sidebar sidebar-first page-where-to-stay
                                         <div class="col-md-4 col-xs-12 blo_imghei"><img
                                                 typeof="foaf:Image" src="{{ stay.thumbnail.url }}"
                                                 width="280" height="222" alt=""></div>
-                                        <div class="col-md-5 zg_block"><a href="../tmp/kafe.html"
-                                                                          typeof="skos:Concept"
-                                                                          property="rdfs:label skos:prefLabel">{{ stay.get_type_display }}</a>
+                                          <div class="col-md-5 zg_block"><a href="{% url 'type_stay' stay.type.slug %}"
+                                                                            typeof="skos:Concept" 
+                                                                            property="rdfs:label skos:prefLabel">{{ stay.type }}</a>
                                             <div class="zg_hotel"><a
                                                     href="{% url 'stay_detail' stay.pk %}">{{ stay.title }}</a></div>
                                             {% with stay.reviews.count as count %}
