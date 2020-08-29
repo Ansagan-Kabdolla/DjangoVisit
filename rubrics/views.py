@@ -113,17 +113,17 @@ def stay(request):
     if request.LANGUAGE_CODE == 'ru':
         stay_count_otel = stays.filter(type__name='Отель').count()
         stay_count_sanat = stays.filter(type__name='Санаторий').count()
-        stay_count_gostdom = stays.filter(type__name='Гостевой дом').count()
+        stay_count_gostdom = stays.filter(type__name='Гостевые дома').count()
         stay_count_zona = stays.filter(type__name='Зона отдыха').count()
     elif request.LANGUAGE_CODE == 'en':
-        stay_count_otel = stays.filter(type__name='Otel').count()
+        stay_count_otel = stays.filter(type__name='Hotel').count()
         stay_count_sanat = stays.filter(type__name='Sanatorium').count()
-        stay_count_gostdom = stays.filter(type__name='Guest houses').count()
-        stay_count_zona = stays.filter(type__name='Rezt zonez').count()
+        stay_count_gostdom = stays.filter(type__name='Guest house').count()
+        stay_count_zona = stays.filter(type__name='Recreation area').count()
     else:
-        stay_count_otel = stays.filter(type__name='Отель').count()
-        stay_count_sanat = stays.filter(type__name='Санаторий').count()
-        stay_count_gostdom = stays.filter(type__name='Қонақ үй').count()
+        stay_count_otel = stays.filter(type__name='Қонақ үй').count()
+        stay_count_sanat = stays.filter(type__name='Шипажай').count()
+        stay_count_gostdom = stays.filter(type__name='Қонақ үйлер').count()
         stay_count_zona = stays.filter(type__name='Демалыс аймағы').count()
     context = {'stays':stays_page,'n':n,'types':dic_types,'cities':dic_cities,'stars':dic_stars,'stay_count_otel':stay_count_otel,
                'stay_count_sanat':stay_count_sanat,'stay_count_gostdom':stay_count_gostdom,'hotels':hotels,
