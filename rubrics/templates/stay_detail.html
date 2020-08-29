@@ -18,7 +18,7 @@
                                     <div itemscope="" class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb">
                                         <span itemprop="title"><a href="{% url 'index' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
                                         <span itemprop="title"><a href="{% url 'stay' %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">{% trans 'Где остановиться' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
-                                        <span itemprop="title"><a href="../tmp/kafe_kz.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">{{stay.type}}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                                        <span itemprop="title"><a href="{% url 'type_stay' stay.type.slug %}" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">{{stay.type}}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
                                         <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{{stay.title}}</span> </div>
 
                                 </section>
