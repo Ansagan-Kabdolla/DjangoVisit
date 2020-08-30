@@ -159,7 +159,7 @@
                                                     alt=""></div>
                                             <div class="col-md-5 zg_block">
                                                 <a href="{% url 'type_eat' eat.type.slug %}" typeof="skos:Concept" property="rdfs:label skos:prefLabel">{{ eat.type }}</a>
-                                                <div class="zg_hotel"><a href="{% url 'eat_detail' eat.pk %}">{{ eat.title }}</a></div>
+                                                <div class="zg_hotel"><a href="{% url 'eat_detail' eat.slug %}">{{ eat.title }}</a></div>
                                                 {% with eat.reviews.count as count %}
                                                 {% if count == 1 %}
                                                 <div class="kolvo">{{ eat.reviews.count }} {% trans 'отзыв' %}</div>

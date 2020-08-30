@@ -226,14 +226,14 @@ def eat(request):
                                              'count_fast_food':count_fast_food,'count_stolovaia':count_stolovaia})
 
 
-def eat_detail(request,pk):
-    eat = Eat.objects.get(pk=pk)
+def eat_detail(request,slug):
+    eat = Eat.objects.get(slug=slug)
     reviews = eat.reviews.all()
     return render(request,'eat_detail.html', {'eat':eat,'reviews':reviews})
 
-def go_detail(request,pk):
+def go_detail(request,slug):
     to_go = Go.objects.all()
-    go = to_go.get(pk=pk)
+    go = to_go.get(slug=slug)
     if request.LANGUAGE_CODE == 'ru':
         count_museum = to_go.filter(type__name = 'Музей').count()
         count_monument = to_go.filter(type__name = 'Памятник').count()
@@ -253,8 +253,8 @@ def go_detail(request,pk):
               'count_monument':count_monument,'count_zapovednik':count_zapovednik,'count_showplace':count_showplace}
     )
 
-def stay_detail(request,pk):
-    stay = Stay.objects.get(pk=pk)
+def stay_detail(request,slug):
+    stay = Stay.objects.get(slug=slug)
     reviews = stay.reviews.all()
     return render(request,'stay_detail.html', {'stay':stay,'reviews':reviews})
 
