@@ -170,7 +170,7 @@
                 <div class="container review_container">
 
                     <h4 class="content_title review_form_title">{% trans 'Добавить отзыв' %}:</h4>
-                    <form action="{% url 'add_reviews_stay' stay.pk %}" method="POST" class="review_form">
+                    <form action="{% url 'add_reviews_stay' stay.pk %}?next={{ stay.get_absolute_url }}" method="POST" class="review_form">
                         {% csrf_token %}
                         <label for="review_form_name">{% trans 'Имя' %}</label>
                         <input type="text" name="name" class="review_form_input review_form_name" id="review_form_name" placeholder="{% trans 'Введите свое имя..' %}">

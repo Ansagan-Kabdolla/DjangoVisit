@@ -120,7 +120,7 @@ class="html not-front not-logged-in one-sidebar sidebar-first page-where-to-stay
                                                                             typeof="skos:Concept" 
                                                                             property="rdfs:label skos:prefLabel">{{ stay.type }}</a>
                                             <div class="zg_hotel"><a
-                                                    href="{% url 'stay_detail' stay.pk %}">{{ stay.title }}</a></div>
+                                                    href="{{ stay.get_absolute_url }}">{{ stay.title }}</a></div>
                                             {% with stay.reviews.count as count %}
                                             {% if count == 1 %}
                                             <div class="kolvo">{{ stay.reviews.count }} {% trans 'отзыв' %}</div>

@@ -80,7 +80,7 @@ class Eat(models.Model):
     slug = models.SlugField(max_length=70, unique=True, blank=True, null=True)
     objects = ArticleManager()
     def get_absolute_url(self):
-        return reverse('eat_detail', args=[str(self.id)])
+        return reverse('eat_detail', args=[str(self.slug)])
     def __str__(self):
         return self.title
     class Meta:
@@ -106,7 +106,7 @@ class Go(models.Model):
     slug = models.SlugField(max_length=70, unique=True, blank=True, null=True)
     objects = ArticleManager()
     def get_absolute_url(self):
-        return reverse('go_detail', args=[str(self.id)])
+        return reverse('go_detail', args=[str(self.slug)])
     def __str__(self):
         return self.title
     class Meta:
@@ -145,7 +145,7 @@ class Stay(models.Model):
     slug = models.SlugField(max_length=70, unique=True, blank=True, null=True)
     objects = ArticleManager()
     def get_absolute_url(self):
-        return reverse('stay_detail', args=[str(self.id)])
+        return reverse('stay_detail', args=[str(self.slug)])
     def __str__(self):
         return self.title
 

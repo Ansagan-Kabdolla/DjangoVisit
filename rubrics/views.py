@@ -272,6 +272,8 @@ class AddReviewEat(View):
         else:
             e = True
             #return render(request,'eat_detail.html',{'form':form,'eat':eat,'reviews':reviews})
+        if 'next' in request.GET:
+            return redirect(request.GET['next'])
         return render(request,'eat_detail.html', {'eat':eat,'reviews':reviews,'e':e})
 
 class AddReviewStay(View):
@@ -287,6 +289,8 @@ class AddReviewStay(View):
         else:
             e = True
             #return render(request,'eat_detail.html',{'form':form,'eat':eat,'reviews':reviews})
+        if 'next' in request.GET:
+            return redirect(request.GET['next'])
         return render(request,'stay_detail.html', {'stay':stay,'reviews':reviews,'e':e})
 
 def filtering(request):
