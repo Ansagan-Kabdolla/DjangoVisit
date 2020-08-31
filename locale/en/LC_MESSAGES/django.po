@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-31 03:27+0600\n"
+"POT-Creation-Date: 2020-08-31 18:15+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,24 +25,26 @@ msgstr ""
 #: .\rubrics\templates\search.html:19 .\rubrics\templates\stay.html:22
 #: .\rubrics\templates\stay_detail.html:19 .\rubrics\templates\tourists.html:20
 #: .\rubrics\templates\tourists_detail.html:16
-#: .\rubrics\templates\type_eat.html:24 .\rubrics\templates\type_stay.html:22
-#: .\rubrics\templates\where.html:20
+#: .\rubrics\templates\tours.html:19 .\rubrics\templates\type_eat.html:24
+#: .\rubrics\templates\type_stay.html:22 .\rubrics\templates\where.html:20
 msgid "Главная"
 msgstr "Home"
 
 #: .\rubrics\templates\akmola.html:23 .\rubrics\templates\akmola.html:34
-msgid "Об Акмолинской области"
-msgstr ""
-
 #: .\rubrics\templates\akmola_detail.html:18 .\rubrics\templates\base.html:53
 msgid "Акмола"
 msgstr "Akmola"
+
+#: .\rubrics\templates\akmola.html:60
+msgid "Подробнее"
+msgstr "Detail"
 
 #: .\rubrics\templates\base.html:10
 msgid "ТУРИСТСКИЙ ИНФОРМАЦИОННЫЙ ЦЕНТР АКМОЛИНСКОЙ ОБЛАСТИ"
 msgstr "Tourism Information center in Aqmola"
 
-#: .\rubrics\templates\base.html:54
+#: .\rubrics\templates\base.html:54 .\rubrics\templates\tours.html:20
+#: .\rubrics\templates\tours.html:54
 msgid "Маршруты"
 msgstr "Tours"
 
@@ -83,7 +85,6 @@ msgid "Новости"
 msgstr "News"
 
 #: .\rubrics\templates\base.html:66
-#| msgid "команда Visit Aqmola"
 msgid "Команда Visit Aqmola"
 msgstr "Visit Aqmola groups"
 
@@ -140,7 +141,6 @@ msgid "отзывов"
 msgstr "reviews"
 
 #: .\rubrics\templates\eat_detail.html:53
-#| msgid "Средний чек"
 msgid "Cредний чек"
 msgstr "Middle price"
 
@@ -175,7 +175,6 @@ msgstr "A user with this Email has already left a review"
 
 #: .\rubrics\templates\eat_detail.html:174
 #: .\rubrics\templates\stay_detail.html:181
-#| msgid "отзыв"
 msgid "Отзыв"
 msgstr "review"
 
@@ -186,7 +185,6 @@ msgstr "Send"
 
 #: .\rubrics\templates\eat_detail.html:179
 #: .\rubrics\templates\stay_detail.html:186
-#| msgid "отзыв"
 msgid "Отзывы"
 msgstr "review"
 
@@ -197,7 +195,6 @@ msgstr "So far no one has left a review"
 
 #: .\rubrics\templates\events.html:20 .\rubrics\templates\events.html:29
 #: .\rubrics\templates\where.html:59
-#| msgid "Мерприятия"
 msgid "Мероприятия"
 msgstr "Events"
 
@@ -232,6 +229,16 @@ msgstr "sights"
 #: .\rubrics\templates\go_detail.html:39 .\rubrics\templates\where.html:41
 msgid "заповедник"
 msgstr "reserve"
+
+#: .\rubrics\templates\includes\pagination.html:9
+#: .\rubrics\templates\includes\pagination.html:13
+msgid "Пред."
+msgstr "Prev"
+
+#: .\rubrics\templates\includes\pagination.html:38
+#: .\rubrics\templates\includes\pagination.html:42
+msgid "След."
+msgstr "Next"
 
 #: .\rubrics\templates\index.html:29
 msgid ""
@@ -270,7 +277,6 @@ msgid "Выберите один из тысячи маршрутов"
 msgstr "Choose from thousands of routes"
 
 #: .\rubrics\templates\index.html:95
-#| msgid "Посмотреть на карте"
 msgid "Посмотреть все маршруты"
 msgstr "View in tours"
 
@@ -291,7 +297,6 @@ msgid "Выберите подходящий отель"
 msgstr "Choose the right hotel"
 
 #: .\rubrics\templates\index.html:139
-#| msgid "Посмотреть на карте"
 msgid "Смотреть все отели"
 msgstr "See all hotels"
 
@@ -300,7 +305,6 @@ msgid "Попробуйте местную кухню"
 msgstr "Taste the local cuisine"
 
 #: .\rubrics\templates\index.html:169
-#| msgid "Посмотреть на карте"
 msgid "Посмотреть все заведения"
 msgstr "View all establishments"
 
@@ -314,7 +318,8 @@ msgstr "VIEW PLAYER"
 
 #: .\rubrics\templates\index.html:253
 msgid "Памятка туристу поможем провести запоминающийся отдых"
-msgstr "Instruction for the tourist we will help you to spend a memorable vacation"
+msgstr ""
+"Instruction for the tourist we will help you to spend a memorable vacation"
 
 #: .\rubrics\templates\index.html:254
 msgid "Полная инструкция"
@@ -392,13 +397,6 @@ msgid "Найдено совпадений"
 msgstr "Found matches"
 
 #: .\rubrics\templates\stay.html:30 .\rubrics\templates\type_stay.html:30
-#| msgid ""
-#| "Показаны кафе городов и других населенных пунктов Акмолинской области, а "
-#| "именно города Кокшетау, Щучинско-Боровской курортной зоны (Борового), "
-#| "Зеренды, и т.д. Фильтр слева от данного текста поможет Вам выбрать "
-#| "наиболее подходящее место для трапезы. Для того, чтобы посмотреть кафе/"
-#| "рестораны только определенного города, например, гостиницы Борового, или "
-#| "гостиницы Зеренды, воспользуйтесь основным меню 'Где поесть'."
 msgid ""
 " Показаны гостиницы городов и других населенных пунктов Акмолинской области, "
 "а именно города\n"
@@ -410,14 +408,12 @@ msgid ""
 "Борового, или гостиницы Зеренды, воспользуйтесь\n"
 "                        основным меню 'Где остановиться'.'"
 msgstr ""
-"Shown are hotels in cities and other settlements of Akmola region,"
-"namely the city \n"
-"Kokshetau, Shchuchinsko-Borovsk resort area"
-"(Borovoy), Zerenda, etc. Filter to the left of this \n"
-"text will help you choose the most suitable one"
-"hotel. To see hotels \n"
-"only a certain city, for example, a hotel"
-"Borovoy, or Zerenda's hotel, use \n"
+"Shown are hotels in cities and other settlements of Akmola region,namely the "
+"city \n"
+"Kokshetau, Shchuchinsko-Borovsk resort area(Borovoy), Zerenda, etc. Filter "
+"to the left of this \n"
+"text will help you choose the most suitable onehotel. To see hotels \n"
+"only a certain city, for example, a hotelBorovoy, or Zerenda's hotel, use \n"
 "the main menu 'Where to stay'. '"
 
 #: .\rubrics\templates\stay.html:39 .\rubrics\templates\type_stay.html:39
@@ -450,7 +446,6 @@ msgid "тенге"
 msgstr "tenge"
 
 #: .\rubrics\templates\stay_detail.html:60
-#| msgid "Цена"
 msgid "Цена от"
 msgstr "Price from"
 
@@ -459,7 +454,6 @@ msgid "Введите свое имя.."
 msgstr "Enter your name .."
 
 #: .\rubrics\templates\stay_detail.html:178
-#| msgid "Пользователь с данным Email уже оставлял отзыв"
 msgid "(Пользователь с данным Email уже оставлял отзыв)"
 msgstr "A user with this Email has already left a review"
 
@@ -468,7 +462,6 @@ msgid "Введите свой email.."
 msgstr "Enter your email .."
 
 #: .\rubrics\templates\stay_detail.html:182
-#| msgid "Добавить отзыв"
 msgid "Введите отзыв.."
 msgstr "Add review"
 
