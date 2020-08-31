@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 18:03+0600\n"
+"POT-Creation-Date: 2020-08-31 15:18+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "Басты"
 
 #: .\rubrics\templates\akmola.html:23 .\rubrics\templates\akmola.html:34
 msgid "Об Акмолинской области"
-msgstr ""
+msgstr "Ақмола облысы туралы"
 
 #: .\rubrics\templates\akmola_detail.html:18 .\rubrics\templates\base.html:53
 msgid "Акмола"
@@ -208,135 +208,138 @@ msgstr "Іс шаралар"
 
 #: .\rubrics\templates\events.html:45
 msgid "Дата"
-msgstr ""
+msgstr "Күні"
 
 #: .\rubrics\templates\gallery.html:20 .\rubrics\templates\gallery.html:27
 msgid "Фото"
-msgstr ""
+msgstr "Фото"
 
 #: .\rubrics\templates\go_detail.html:24 .\rubrics\templates\where.html:26
 msgid "КУДА СХОДИТЬ"
-msgstr ""
+msgstr "ҚАЙДА БАРУҒА БОЛАДЫ"
 
 #: .\rubrics\templates\go_detail.html:25
 msgid "Проведите время с пользой и удовольствием!"
-msgstr ""
+msgstr "Уақытты пайдалы және рахатпен өткізіңіз!"
 
 #: .\rubrics\templates\go_detail.html:30 .\rubrics\templates\where.html:32
 msgid "музеев"
-msgstr ""
+msgstr "мұражай"
 
 #: .\rubrics\templates\go_detail.html:33 .\rubrics\templates\where.html:35
 msgid "памятников"
-msgstr ""
+msgstr "ескерткіш"
 
 #: .\rubrics\templates\go_detail.html:36 .\rubrics\templates\where.html:38
 msgid "достопримичательностей"
-msgstr ""
+msgstr "көрікті жер"
 
 #: .\rubrics\templates\go_detail.html:39 .\rubrics\templates\where.html:41
 msgid "заповедник"
-msgstr ""
+msgstr "қорық"
 
 #: .\rubrics\templates\index.html:29
 msgid ""
 " Туристский информационный центр\n"
-"                            <span>Акмолинской области</span> "
+"                            <span>Акмолинской области</span>\n"
 msgstr ""
+"<span> Ақмола облысының </span>"
+"туристтік ақпарат орталығы \n"
+
 
 #: .\rubrics\templates\index.html:32
 msgid "Добро пожаловать!"
-msgstr ""
+msgstr "Добро пожаловать!"
 
 #: .\rubrics\templates\index.html:45
 msgid "Начните свое путешествие в Акмолинскую область вместе с нами"
-msgstr ""
+msgstr "Ақмола облысына сапарыңызды бізден бастаңыз"
 
 #: .\rubrics\templates\index.html:46
 msgid "ПОЗНАКОМИТЬСЯ С ОБЛАСТЬЮ ПОБЛИЖЕ"
-msgstr ""
+msgstr "АЙМАҚПЕН ЖАҚСЫЛАП ТАНЫСЫНЫЗ"
 
 #: .\rubrics\templates\index.html:61
 msgid "Природа"
-msgstr ""
+msgstr "Табиғат"
 
 #: .\rubrics\templates\index.html:69
 msgid "География"
-msgstr ""
+msgstr "География"
 
 #: .\rubrics\templates\index.html:77
 msgid "История"
-msgstr ""
+msgstr "Тарих"
 
 #: .\rubrics\templates\index.html:94
 msgid "Выберите один из тысячи маршрутов"
-msgstr ""
+msgstr "Мыңдаған маршруттарды таңдаңыз"
 
 #: .\rubrics\templates\index.html:95
 #, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Посмотреть все маршруты"
-msgstr "Картадан қарау"
+msgstr "Барлық маршрутты қарау"
 
 #: .\rubrics\templates\index.html:107
 msgid "Жемчужина Казахстана - Бурабай"
-msgstr ""
+msgstr "Қазақстанның інжу-маржаны - Бурабай"
 
 #: .\rubrics\templates\index.html:115
 msgid "В гости к природе"
-msgstr ""
+msgstr "Табиғатқа қонаққа"
 
 #: .\rubrics\templates\index.html:123
 msgid "Волшебный мир Бурабая"
-msgstr ""
+msgstr "Бурабайдың сиқырлы әлемі"
 
 #: .\rubrics\templates\index.html:138
 msgid "Выберите подходящий отель"
-msgstr ""
+msgstr "Дұрыс қонақүйді таңдаңыз"
 
 #: .\rubrics\templates\index.html:139
 #, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Смотреть все отели"
-msgstr "Картадан қарау"
+msgstr "Барлық қонақ үйлерді қарау"
 
 #: .\rubrics\templates\index.html:168
 msgid "Попробуйте местную кухню"
-msgstr ""
+msgstr "Жергілікті асханадан дәм татыңыз"
 
 #: .\rubrics\templates\index.html:169
 #, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Посмотреть все заведения"
-msgstr "Картадан қарау"
+msgstr "Барлық мекемелерді қарау"
 
 #: .\rubrics\templates\index.html:183
 msgid "Посетите культурные и развлекательные мероприятия"
-msgstr ""
+msgstr "Мәдени-сауықтыру шараларына қатысыңыз"
 
 #: .\rubrics\templates\index.html:184
 msgid "СМОТРЕТЬ АФИШУ"
-msgstr ""
+msgstr "КЕСТЕНІ ҚАРАУ"
 
 #: .\rubrics\templates\index.html:253
 msgid "Памятка туристу поможем провести запоминающийся отдых"
-msgstr ""
+msgstr "Туристке арналған нұсқаулық біз сізге демалысты ұмытылмас өткізуге көмектеседі"
 
 #: .\rubrics\templates\index.html:254
 msgid "Полная инструкция"
-msgstr ""
+msgstr "Толық нұсқаулық"
 
 #: .\rubrics\templates\index.html:266
 msgid "Разговорник"
-msgstr ""
+msgstr "Сөздік"
 
 #: .\rubrics\templates\index.html:274
 msgid "Правила безопасности"
-msgstr ""
+msgstr "Қауіпсіздік ережелері"
 
 #: .\rubrics\templates\index.html:283
 msgid "Транспорт"
-msgstr ""
+msgstr "Көлік"
 
 #: .\rubrics\templates\restaraunt.html:41 .\rubrics\templates\type_eat.html:45
 msgid "Ресторанов"
@@ -391,11 +394,11 @@ msgstr "Орташа баға"
 
 #: .\rubrics\templates\search.html:22 .\rubrics\templates\search.html:28
 msgid "Результаты поиска"
-msgstr ""
+msgstr "Іздеу нәтижесі"
 
 #: .\rubrics\templates\search.html:30
 msgid "Найдено совпадений"
-msgstr ""
+msgstr "Сәйкестіктер табылды"
 
 #: .\rubrics\templates\stay.html:30 .\rubrics\templates\type_stay.html:30
 #, fuzzy
@@ -417,41 +420,43 @@ msgid ""
 "Борового, или гостиницы Зеренды, воспользуйтесь\n"
 "                        основным меню 'Где остановиться'.'"
 msgstr ""
-"Ақмола облысының қалалары мен басқа да елді мекендерінің кафелерін көрсету, "
-"атап айтқанда Көкшетау қаласы, Щучинск-Боров курорттық аймағы (Бурабай), "
-"Зеренді және т.б. Осы мәтіннің сол жағындағы сүзгі тағамға ең қолайлы орынды "
-"таңдауға көмектеседі. Тек белгілі бір қаланың кафелері / мейрамханаларын, "
-"мысалы, Бурабай қонақ үйі немесе Зеренда қонақүйін көру үшін, «Қай жерде "
-"тамақтану керек» мәзірін пайдаланыңыз."
+"Ақмола облысының қалалары мен басқа елді мекендеріндегі қонақ үйлер көрсетілген"
+"Көкшетау, Щучинск-Боровое курорттық аймағы"
+"(Бурабай), Зеренда және т.с.с. сол жақтағы фильтр"
+"сізге қонақ үйдің лайықтысын таңдауға көмектеседі."
+"Қонақ үйлерді көру үшін \n"
+"тек белгілі бір қала, мысалы, қонақ үй"
+"Бурабай немесе Зеренданың қонақ үйі \n пайдаланыңыз"
+"Қайда болу керек."
 
 #: .\rubrics\templates\stay.html:39 .\rubrics\templates\type_stay.html:39
 msgid "отелей"
-msgstr ""
+msgstr "отель"
 
 #: .\rubrics\templates\stay.html:42 .\rubrics\templates\type_stay.html:42
 msgid "Санаториев"
-msgstr ""
+msgstr "Санаторий"
 
 #: .\rubrics\templates\stay.html:45 .\rubrics\templates\type_stay.html:45
 msgid "Гостевых домов"
-msgstr ""
+msgstr "Қонақ үй"
 
 #: .\rubrics\templates\stay.html:48 .\rubrics\templates\type_stay.html:48
 msgid "Зон отдыха"
-msgstr ""
+msgstr "Демалыс аймағы"
 
 #: .\rubrics\templates\stay.html:135
 msgid "Количество звезд"
-msgstr ""
+msgstr "Жұлдыздар саны"
 
 #: .\rubrics\templates\stay.html:141
 msgid "звезды"
-msgstr ""
+msgstr "жұлдыз"
 
 #: .\rubrics\templates\stay.html:187 .\rubrics\templates\stay_detail.html:60
 #: .\rubrics\templates\type_stay.html:136
 msgid "тенге"
-msgstr ""
+msgstr "теңге"
 
 #: .\rubrics\templates\stay_detail.html:60
 #, fuzzy
@@ -461,17 +466,17 @@ msgstr "Бағасы"
 
 #: .\rubrics\templates\stay_detail.html:176
 msgid "Введите свое имя.."
-msgstr ""
+msgstr "Атыңызды енгізіңіз .."
 
 #: .\rubrics\templates\stay_detail.html:178
 #, fuzzy
 #| msgid "Пользователь с данным Email уже оставлял отзыв"
 msgid "(Пользователь с данным Email уже оставлял отзыв)"
-msgstr "Осы Email арқылы қалдырылған пікір бар"
+msgstr "(Осы Email арқылы қалдырылған пікір бар)"
 
 #: .\rubrics\templates\stay_detail.html:180
 msgid "Введите свой email.."
-msgstr ""
+msgstr "Электрондық поштаңызды енгізіңіз .."
 
 #: .\rubrics\templates\stay_detail.html:182
 #, fuzzy
@@ -482,38 +487,38 @@ msgstr "Пікір қалдыру"
 #: .\rubrics\templates\tourists.html:26
 #: .\rubrics\templates\tourists_detail.html:23
 msgid "Ваша безопасность - Наша ответственность"
-msgstr ""
+msgstr "Сіздің қауіпсіздігіңіз біздің міндетіміз"
 
 #: .\rubrics\templates\tourists.html:31
 #: .\rubrics\templates\tourists_detail.html:28
 msgid "Горячие номера"
-msgstr ""
+msgstr "Шұғыл нөмірлер"
 
 #: .\rubrics\templates\tourists.html:37
 #: .\rubrics\templates\tourists_detail.html:34
 msgid "пожарная"
-msgstr ""
+msgstr "өрт сөндіру қызметі"
 
 #: .\rubrics\templates\tourists.html:40
 #: .\rubrics\templates\tourists_detail.html:37
 msgid "скорая"
-msgstr ""
+msgstr "жедел жәрдем"
 
 #: .\rubrics\templates\tourists.html:43
 msgid "Служба спасенияия"
-msgstr ""
+msgstr "Құтқару қызметі"
 
 #: .\rubrics\templates\tourists_detail.html:31
 msgid "полиция"
-msgstr ""
+msgstr "полиция"
 
 #: .\rubrics\templates\tourists_detail.html:40
 msgid "служба спасения"
-msgstr ""
+msgstr "құтқару қызметі"
 
 #: .\rubrics\templates\where.html:27
 msgid "Проведите время с пользой и удовольствием"
-msgstr ""
+msgstr "Уақытты пайдалы және қуанышпен өткізіңіз"
 
 #~ msgid "Visit Aqmola командасы"
 #~ msgstr "Visit Aqmola командасы"
