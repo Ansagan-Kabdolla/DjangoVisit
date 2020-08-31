@@ -83,7 +83,6 @@ msgid "Новости"
 msgstr "Жаналыктар"
 
 #: .\rubrics\templates\base.html:66
-#, fuzzy
 #| msgid "команда Visit Aqmola"
 msgid "Команда Visit Aqmola"
 msgstr "Visit Aqmola Командасы"
@@ -141,7 +140,6 @@ msgid "отзывов"
 msgstr "пікірлер"
 
 #: .\rubrics\templates\eat_detail.html:53
-#, fuzzy
 #| msgid "Средний чек"
 msgid "Cредний чек"
 msgstr "Орташа баға"
@@ -177,10 +175,9 @@ msgstr "Осы Email арқылы қалдырылған пікір бар"
 
 #: .\rubrics\templates\eat_detail.html:174
 #: .\rubrics\templates\stay_detail.html:181
-#, fuzzy
 #| msgid "отзыв"
 msgid "Отзыв"
-msgstr "пікір"
+msgstr "Пікір"
 
 #: .\rubrics\templates\eat_detail.html:176
 #: .\rubrics\templates\stay_detail.html:183
@@ -189,10 +186,9 @@ msgstr "Жіберу"
 
 #: .\rubrics\templates\eat_detail.html:179
 #: .\rubrics\templates\stay_detail.html:186
-#, fuzzy
 #| msgid "отзыв"
 msgid "Отзывы"
-msgstr "пікір"
+msgstr "Пікірлер"
 
 #: .\rubrics\templates\eat_detail.html:190
 #: .\rubrics\templates\stay_detail.html:197
@@ -201,7 +197,6 @@ msgstr "Әлі ешкім пікір қалдырған жоқ"
 
 #: .\rubrics\templates\events.html:20 .\rubrics\templates\events.html:29
 #: .\rubrics\templates\where.html:59
-#, fuzzy
 #| msgid "Мерприятия"
 msgid "Мероприятия"
 msgstr "Іс шаралар"
@@ -276,7 +271,6 @@ msgid "Выберите один из тысячи маршрутов"
 msgstr "Мыңдаған маршруттарды таңдаңыз"
 
 #: .\rubrics\templates\index.html:95
-#, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Посмотреть все маршруты"
 msgstr "Барлық маршрутты қарау"
@@ -298,7 +292,6 @@ msgid "Выберите подходящий отель"
 msgstr "Дұрыс қонақүйді таңдаңыз"
 
 #: .\rubrics\templates\index.html:139
-#, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Смотреть все отели"
 msgstr "Барлық қонақ үйлерді қарау"
@@ -308,7 +301,6 @@ msgid "Попробуйте местную кухню"
 msgstr "Жергілікті асханадан дәм татыңыз"
 
 #: .\rubrics\templates\index.html:169
-#, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Посмотреть все заведения"
 msgstr "Барлық мекемелерді қарау"
@@ -401,7 +393,6 @@ msgid "Найдено совпадений"
 msgstr "Сәйкестіктер табылды"
 
 #: .\rubrics\templates\stay.html:30 .\rubrics\templates\type_stay.html:30
-#, fuzzy
 #| msgid ""
 #| "Показаны кафе городов и других населенных пунктов Акмолинской области, а "
 #| "именно города Кокшетау, Щучинско-Боровской курортной зоны (Борового), "
@@ -459,7 +450,6 @@ msgid "тенге"
 msgstr "теңге"
 
 #: .\rubrics\templates\stay_detail.html:60
-#, fuzzy
 #| msgid "Цена"
 msgid "Цена от"
 msgstr "Бағасы"
@@ -469,7 +459,6 @@ msgid "Введите свое имя.."
 msgstr "Атыңызды енгізіңіз .."
 
 #: .\rubrics\templates\stay_detail.html:178
-#, fuzzy
 #| msgid "Пользователь с данным Email уже оставлял отзыв"
 msgid "(Пользователь с данным Email уже оставлял отзыв)"
 msgstr "(Осы Email арқылы қалдырылған пікір бар)"
@@ -479,7 +468,6 @@ msgid "Введите свой email.."
 msgstr "Электрондық поштаңызды енгізіңіз .."
 
 #: .\rubrics\templates\stay_detail.html:182
-#, fuzzy
 #| msgid "Добавить отзыв"
 msgid "Введите отзыв.."
 msgstr "Пікір қалдыру"

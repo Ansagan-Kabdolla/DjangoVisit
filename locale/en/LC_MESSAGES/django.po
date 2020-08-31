@@ -83,7 +83,6 @@ msgid "Новости"
 msgstr "News"
 
 #: .\rubrics\templates\base.html:66
-#, fuzzy
 #| msgid "команда Visit Aqmola"
 msgid "Команда Visit Aqmola"
 msgstr "Visit Aqmola groups"
@@ -141,7 +140,6 @@ msgid "отзывов"
 msgstr "reviews"
 
 #: .\rubrics\templates\eat_detail.html:53
-#, fuzzy
 #| msgid "Средний чек"
 msgid "Cредний чек"
 msgstr "Middle price"
@@ -177,7 +175,6 @@ msgstr "A user with this Email has already left a review"
 
 #: .\rubrics\templates\eat_detail.html:174
 #: .\rubrics\templates\stay_detail.html:181
-#, fuzzy
 #| msgid "отзыв"
 msgid "Отзыв"
 msgstr "review"
@@ -189,7 +186,6 @@ msgstr "Send"
 
 #: .\rubrics\templates\eat_detail.html:179
 #: .\rubrics\templates\stay_detail.html:186
-#, fuzzy
 #| msgid "отзыв"
 msgid "Отзывы"
 msgstr "review"
@@ -201,7 +197,6 @@ msgstr "So far no one has left a review"
 
 #: .\rubrics\templates\events.html:20 .\rubrics\templates\events.html:29
 #: .\rubrics\templates\where.html:59
-#, fuzzy
 #| msgid "Мерприятия"
 msgid "Мероприятия"
 msgstr "Events"
@@ -275,10 +270,9 @@ msgid "Выберите один из тысячи маршрутов"
 msgstr "Choose from thousands of routes"
 
 #: .\rubrics\templates\index.html:95
-#, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Посмотреть все маршруты"
-msgstr "View in map"
+msgstr "View in tours"
 
 #: .\rubrics\templates\index.html:107
 msgid "Жемчужина Казахстана - Бурабай"
@@ -297,7 +291,6 @@ msgid "Выберите подходящий отель"
 msgstr "Choose the right hotel"
 
 #: .\rubrics\templates\index.html:139
-#, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Смотреть все отели"
 msgstr "See all hotels"
@@ -307,7 +300,6 @@ msgid "Попробуйте местную кухню"
 msgstr "Taste the local cuisine"
 
 #: .\rubrics\templates\index.html:169
-#, fuzzy
 #| msgid "Посмотреть на карте"
 msgid "Посмотреть все заведения"
 msgstr "View all establishments"
@@ -400,7 +392,6 @@ msgid "Найдено совпадений"
 msgstr "Found matches"
 
 #: .\rubrics\templates\stay.html:30 .\rubrics\templates\type_stay.html:30
-#, fuzzy
 #| msgid ""
 #| "Показаны кафе городов и других населенных пунктов Акмолинской области, а "
 #| "именно города Кокшетау, Щучинско-Боровской курортной зоны (Борового), "
@@ -459,7 +450,6 @@ msgid "тенге"
 msgstr "tenge"
 
 #: .\rubrics\templates\stay_detail.html:60
-#, fuzzy
 #| msgid "Цена"
 msgid "Цена от"
 msgstr "Price from"
@@ -469,7 +459,6 @@ msgid "Введите свое имя.."
 msgstr "Enter your name .."
 
 #: .\rubrics\templates\stay_detail.html:178
-#, fuzzy
 #| msgid "Пользователь с данным Email уже оставлял отзыв"
 msgid "(Пользователь с данным Email уже оставлял отзыв)"
 msgstr "A user with this Email has already left a review"
@@ -479,7 +468,6 @@ msgid "Введите свой email.."
 msgstr "Enter your email .."
 
 #: .\rubrics\templates\stay_detail.html:182
-#, fuzzy
 #| msgid "Добавить отзыв"
 msgid "Введите отзыв.."
 msgstr "Add review"
