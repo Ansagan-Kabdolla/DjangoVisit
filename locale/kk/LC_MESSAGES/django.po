@@ -369,11 +369,11 @@ msgstr ""
 
 #: .\rubrics\templates\restaraunt.html:41 .\rubrics\templates\type_eat.html:45
 msgid "Ресторанов"
-msgstr "Дәмхана"
+msgstr "Мейрамхана"
 
 #: .\rubrics\templates\restaraunt.html:44 .\rubrics\templates\type_eat.html:48
 msgid "Кафе"
-msgstr "Кафе"
+msgstr "Дәмхана"
 
 #: .\rubrics\templates\restaraunt.html:47 .\rubrics\templates\type_eat.html:51
 msgid "Фаст-фуд"

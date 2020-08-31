@@ -212,15 +212,15 @@ def eat(request):
         count_fast_food = eat_list.filter(type__name = 'Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name = 'Столовая').count()
     elif request.LANGUAGE_CODE == 'kk':
-        count_restoran = eat_list.filter(type__name='Дәмхана').count()
-        count_cafe = eat_list.filter(type__name='Кафе').count()
-        count_fast_food = eat_list.filter(type__name='Фастөфуд').count()
+        count_restoran = eat_list.filter(type__name='Мейрамхана').count()
+        count_cafe = eat_list.filter(type__name='Дәмхана').count()
+        count_fast_food = eat_list.filter(type__name='Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name='Асхана').count()
     else:
-        count_restoran = eat_list.filter(type__name='Restaraunt').count()
+        count_restoran = eat_list.filter(type__name='Restaurant').count()
         count_cafe = eat_list.filter(type__name='Cafe').count()
         count_fast_food = eat_list.filter(type__name='Fast-food').count()
-        count_stolovaia = eat_list.filter(type__name='Canteents').count()
+        count_stolovaia = eat_list.filter(type__name='Canteen').count()
     return render(request,'restaraunt.html',{'eats':eats,'n':n,'types':dic_types,'cities':dic_cities,'foods':food,
                                              'count_restoran':count_restoran,'count_cafe':count_cafe,
                                              'count_fast_food':count_fast_food,'count_stolovaia':count_stolovaia})
@@ -352,15 +352,15 @@ def filtering(request):
         count_fast_food = eat_list.filter(type__name='Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name='Столовая').count()
     elif request.LANGUAGE_CODE == 'kk':
-        count_restoran = eat_list.filter(type__name='Дәмхана').count()
-        count_cafe = eat_list.filter(type__name='Кафе').count()
+        count_restoran = eat_list.filter(type__name='Мейрамхана').count()
+        count_cafe = eat_list.filter(type__name='Дәмхана').count()
         count_fast_food = eat_list.filter(type__name='Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name='Асхана').count()
     else:
-        count_restoran = eat_list.filter(type__name='Restaraunt').count()
+        count_restoran = eat_list.filter(type__name='Restaurant').count()
         count_cafe = eat_list.filter(type__name='Cafe').count()
         count_fast_food = eat_list.filter(type__name='Fast-food').count()
-        count_stolovaia = eat_list.filter(type__name='Canteents').count()
+        count_stolovaia = eat_list.filter(type__name='Canteen').count()
 
     return render(request, 'restaraunt.html', {'eats':eats,'n':n,'city_list':city_list,'type_list':type_list,'foods':food,
                                                'MinPrice':MinPrice,'MaxPrice':MaxPrice,
@@ -626,15 +626,15 @@ def type_eat(request,slug):
         count_fast_food = eat_list.filter(type__name='Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name='Столовая').count()
     elif request.LANGUAGE_CODE == 'kk':
-        count_restoran = eat_list.filter(type__name='Дәмхана').count()
-        count_cafe = eat_list.filter(type__name='Кафе').count()
-        count_fast_food = eat_list.filter(type__name='Фастөфуд').count()
+        count_restoran = eat_list.filter(type__name='Мейрамхана').count()
+        count_cafe = eat_list.filter(type__name='Дәмхана').count()
+        count_fast_food = eat_list.filter(type__name='Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name='Асхана').count()
     else:
         count_restoran = eat_list.filter(type__name='Restaraunt').count()
         count_cafe = eat_list.filter(type__name='Cafe').count()
         count_fast_food = eat_list.filter(type__name='Fast-food').count()
-        count_stolovaia = eat_list.filter(type__name='Canteents').count()
+        count_stolovaia = eat_list.filter(type__name='Canteen').count()
 
     return render(request,'type_eat.html',{'eats':eats,'type':types,'n':n,'foods':food,
                                              'count_restoran':count_restoran,'count_cafe':count_cafe,
