@@ -194,7 +194,7 @@ def eat(request):
         count = eat_list.filter(city = i['city']).count()
         city = Cities.objects.get(id=i['city'])
         dic_cities[city] = count
-    paginator = Paginator(eat_list, 1)
+    paginator = Paginator(eat_list, 6)
     page = request.GET.get('page')
     try:
         eats = paginator.page(page)
