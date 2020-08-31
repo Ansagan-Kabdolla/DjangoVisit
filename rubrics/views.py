@@ -631,7 +631,7 @@ def type_eat(request,slug):
         count_fast_food = eat_list.filter(type__name='Фаст-фуд').count()
         count_stolovaia = eat_list.filter(type__name='Асхана').count()
     else:
-        count_restoran = eat_list.filter(type__name='Restaraunt').count()
+        count_restoran = eat_list.filter(type__name='Restaurant').count()
         count_cafe = eat_list.filter(type__name='Cafe').count()
         count_fast_food = eat_list.filter(type__name='Fast-food').count()
         count_stolovaia = eat_list.filter(type__name='Canteen').count()
