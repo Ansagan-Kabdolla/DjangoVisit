@@ -13,8 +13,8 @@ class="html not-front not-logged-in one-sidebar sidebar-first page-node page-nod
                 <div class="region region-header">
                     <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
                         <div itemscope="" class="easy-breadcrumb easy-breadcrumb_black">
-                            <span itemprop="title"><a href="{% url 'index' %}">Главная</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
-                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title"><a href="{% url 'tours' %}">Маршруты</a> </span><span class="easy-breadcrumb_segment-separator">»</span>
+                            <span itemprop="title"><a href="{% url 'index' %}">{% trans 'Главная' %}</a></span> <span class="easy-breadcrumb_segment-separator">»</span>
+                            <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title"><a href="{% url 'tours' %}">{% trans 'Маршруты' %}</a> </span><span class="easy-breadcrumb_segment-separator">»</span>
                             <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">{{tour.title}}</span>
                         </div>
 
