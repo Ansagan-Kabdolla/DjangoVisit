@@ -167,21 +167,6 @@
             </div>
         </footer>
     </div>
-
-<script>
-    $(document).ready(function () {
-        var fotoArea = new FotoArea();
-        fotoArea.render($('.foto_list'));
-
-        $(".pagination_area").on("click", function (e) {
-            e.preventDefault();
-            fotoArea.addFoto(e.target.classList.value, e.target.innerText);
-        })
-    })
-
-    $(".page_link_prev").on("click", function(e){ console.log(e.target.classList.value) })
-
-</script>
 <script>
         let toggleBtn = $(".toggleLangBtn");
         let selectLangOptions = $(".selectLangOption");
