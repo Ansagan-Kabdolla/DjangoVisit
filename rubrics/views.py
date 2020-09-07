@@ -391,7 +391,7 @@ def filtering_stay(request):
     MinPrice = None
     MaxPrice = None
     stays = Stay.objects.all()
-    hotels = StaticPages.objects.filter(type='where_to_stay')
+    hotels = SidebarToStay.objects.all()
     if len(stays) == 0:
         pass
     types = stays.values('type').distinct()
