@@ -250,7 +250,7 @@ msgstr ""
 
 #: .\rubrics\templates\index.html:32
 msgid "Добро пожаловать!"
-msgstr "Добро пожаловать!"
+msgstr "Қош келдіңіз!"
 
 #: .\rubrics\templates\index.html:45
 msgid "Начните свое путешествие в Акмолинскую область вместе с нами"
